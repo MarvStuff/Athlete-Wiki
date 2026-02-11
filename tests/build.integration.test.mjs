@@ -38,7 +38,7 @@ describe('Build Integration', () => {
   it('creates index.json with published articles', async () => {
     const json = JSON.parse(await readFile(path.join(OUTPUT_DIR, 'index.json'), 'utf-8'));
     expect(Array.isArray(json)).toBe(true);
-    expect(json.length).toBe(3); // 3 published, 1 draft skipped
+    expect(json.length).toBe(8); // 8 published, 1 draft skipped
     for (const article of json) {
       expect(article).toHaveProperty('title');
       expect(article).toHaveProperty('date');
@@ -63,13 +63,13 @@ describe('Build Integration', () => {
 
   it('creates article HTML files in public/pages/', async () => {
     const files = await readdir(path.join(OUTPUT_DIR, 'pages'));
-    expect(files.length).toBe(3);
-    expect(files).toContain('2026-02-10-blutzucker-dopamin.html');
+    expect(files.length).toBe(8);
+    expect(files).toContain('blutzuckerdopamin.html');
   });
 
   it('injects navbar into article pages', async () => {
     const html = await readFile(
-      path.join(OUTPUT_DIR, 'pages', '2026-02-10-blutzucker-dopamin.html'), 'utf-8'
+      path.join(OUTPUT_DIR, 'pages', 'blutzuckerdopamin.html'), 'utf-8'
     );
     expect(html).toContain('Übersicht');
     expect(html).toContain('Link kopieren');
@@ -79,7 +79,7 @@ describe('Build Integration', () => {
 
   it('injects OG tags into article pages', async () => {
     const html = await readFile(
-      path.join(OUTPUT_DIR, 'pages', '2026-02-10-blutzucker-dopamin.html'), 'utf-8'
+      path.join(OUTPUT_DIR, 'pages', 'blutzuckerdopamin.html'), 'utf-8'
     );
     expect(html).toContain('og:title');
     expect(html).toContain('og:description');

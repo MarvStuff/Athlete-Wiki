@@ -7,7 +7,9 @@
       "Bash(npx vitest run)",
       "Bash(node build.mjs:*)",
       "Bash(dir:*)",
-      "Bash(ls -la \"C:\\\\Users\\\\Anwender\\\\Documents\\\\IT\\\\Web-Projekte\\\\Athlete-Wiki\\\\public\"\" && echo \"---PAGES---\" && ls -la \"C:UsersAnwenderDocumentsITWeb-ProjekteAthlete-Wikipublicpages\"\")"
+      "Bash(ls -la \"C:\\\\Users\\\\Anwender\\\\Documents\\\\IT\\\\Web-Projekte\\\\Athlete-Wiki\\\\public\"\" && echo \"---PAGES---\" && ls -la \"C:UsersAnwenderDocumentsITWeb-ProjekteAthlete-Wikipublicpages\"\")",
+      "Bash(npm test:*)",
+      "Bash(npm run build:*)"
     ]
   }
 }

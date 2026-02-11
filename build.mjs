@@ -52,12 +52,8 @@ export function slugify(text) {
   return text
     .toLowerCase()
     .replace(/ä/g, 'ae').replace(/ö/g, 'oe').replace(/ü/g, 'ue').replace(/ß/g, 'ss')
-    .replace(/[^a-z0-9\s-]/g, '')
-    .replace(/\s+/g, '-')
-    .replace(/-+/g, '-')
-    .replace(/^-|-$/g, '')
-    .slice(0, 80)
-    .replace(/-$/, '');
+    .replace(/[^a-z0-9]/g, '')
+    .slice(0, 50);
 }
 
 export function parseMetaBlock(html) {
@@ -158,11 +154,11 @@ export function checkExternalResources(html, filename) {
   if (/cdn\.jsdelivr\.net/i.test(html)) {
     issues.push(`${filename}: Still contains cdn.jsdelivr.net reference`);
   }
-  // Allow cloudflareinsights (our own hoster) but flag other external scripts
+  // Flag all external scripts (no exceptions – all resources must be local)
   const scriptSrcs = html.matchAll(/<script[^>]+src=["']([^"']+)["']/gi);
   for (const m of scriptSrcs) {
     const src = m[1];
-    if (!src.startsWith('/') && !src.startsWith('./') && !src.includes('cloudflareinsights.com')) {
+    if (!src.startsWith('/') && !src.startsWith('./')) {
       issues.push(`${filename}: External script: ${src}`);
     }
   }
@@ -369,12 +365,15 @@ async function build() {
       continue;
     }
 
-    // Slug
-    let slug = meta?.slug || `${date}-${slugify(title)}`;
+    // Slug (single word, no date prefix, no hyphens)
+    let slug = meta?.slug ? meta.slug.replace(/[^a-z0-9]/gi, '').toLowerCase() : slugify(title);
+    if (meta?.slug && meta.slug !== slug) {
+      warn(`${filename}: Slug "${meta.slug}" enthielt ungültige Zeichen, bereinigt zu "${slug}"`);
+    }
     if (slugs.has(slug)) {
       const origSlug = slug;
       let i = 2;
-      while (slugs.has(slug)) { slug = `${origSlug}-${i++}`; }
+      while (slugs.has(slug)) { slug = `${origSlug}${i++}`; }
       warn(`${filename}: Slug-Kollision mit "${origSlug}", umbenannt zu "${slug}"`);
     }
     slugs.add(slug);

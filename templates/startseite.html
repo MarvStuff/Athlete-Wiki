@@ -188,7 +188,7 @@ body{background:var(--bg);color:var(--text);font-family:var(--font-body);font-we
   </p>
 </noscript>
 
-<script src="/fuse.min.js" defer></script>
+<script src="/fuse.min.js"></script>
 <script>
 (async function(){
   'use strict';
@@ -233,9 +233,9 @@ body{background:var(--bg);color:var(--text);font-family:var(--font-body);font-we
   if(typeof Fuse!=='undefined'){
     fuse=new Fuse(articles,{
       keys:[
-        {name:'title',weight:0.30},
-        {name:'slug',weight:0.25},
+        {name:'title',weight:0.40},
         {name:'tags',weight:0.20},
+        {name:'slug',weight:0.15},
         {name:'category',weight:0.10},
         {name:'keywords',weight:0.10},
         {name:'content',weight:0.05},

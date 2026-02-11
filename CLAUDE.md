@@ -91,7 +91,7 @@ Optional: slug, summary, keywords
 | tags | Leere Liste |
 | category | allgemein |
 | status | published |
-| slug | Auto aus date + slugify(title) |
+| slug | Auto aus slugify(title), ein Wort ohne Datum |
 | summary | Erster `<p>` (max 200 Zeichen) |
 | Meta-Block fehlt | Alle Defaults, Warnung |
 
@@ -111,12 +111,12 @@ Optional: slug, summary, keywords
 
 1. Lowercase
 2. Umlaute: ae, oe, ue, ss
-3. Sonderzeichen entfernen
-4. Leerzeichen → Bindestriche
-5. Mehrfach-Bindestriche → eins
-6. Max 80 Zeichen (Wortende)
-7. Datum voranstellen: YYYY-MM-DD-
-8. Kollisionsschutz: bei Duplikaten -2 anhaengen
+3. Sonderzeichen, Leerzeichen und Bindestriche entfernen
+4. Nur a-z und 0-9 erlaubt
+5. Ergebnis: ein einzelnes zusammenhaengendes Wort
+6. Max 50 Zeichen
+7. Kein Datum-Praefix
+8. Kollisionsschutz: bei Duplikaten Suffix 2 anhaengen (ohne Bindestrich)
 
 ### Validierung im Build
 

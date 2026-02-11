@@ -1,0 +1,211 @@
+<!--
+title: Carb-Loading vor dem Training
+date: 2026-02-11
+tags: ernaehrung, kohlenhydrate, training, glykogen, performance
+category: ernaehrung
+status: published
+slug: carbloading
+summary: Glykogenspeicher richtig füllen für maximale Trainingsleistung. Warum Glukose entscheidend ist und Fruktose in die Leber geht.
+keywords: carbloading, glykogen, kohlenhydrate training, reis haferflocken
+-->
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Carb-Loading – Athlete Wiki</title>
+<style>
+@font-face{font-family:'DM Serif Display';font-style:normal;font-weight:400;font-display:swap;src:url('/fonts/dm-serif-display-regular.woff2') format('woff2')}
+@font-face{font-family:'Outfit';font-style:normal;font-weight:300;font-display:swap;src:url('/fonts/outfit-300.woff2') format('woff2')}
+@font-face{font-family:'Outfit';font-style:normal;font-weight:400;font-display:swap;src:url('/fonts/outfit-400.woff2') format('woff2')}
+@font-face{font-family:'Outfit';font-style:normal;font-weight:500;font-display:swap;src:url('/fonts/outfit-500.woff2') format('woff2')}
+@font-face{font-family:'Outfit';font-style:normal;font-weight:600;font-display:swap;src:url('/fonts/outfit-600.woff2') format('woff2')}
+@font-face{font-family:'Outfit';font-style:normal;font-weight:700;font-display:swap;src:url('/fonts/outfit-700.woff2') format('woff2')}
+:root{--bg:#0f1923;--card:#162231;--card-border:#1e3044;--accent-orange:#ffa94d;--accent-teal:#38d9a9;--accent-red:#ff6b6b;--accent-green:#51cf66;--text:#e8edf2;--text-muted:#8899aa;--text-dim:#556677}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--text);font-family:'Outfit',sans-serif;min-height:100vh;overflow-x:hidden}
+.container{max-width:1100px;margin:0 auto;padding:50px 30px 80px}
+.header{text-align:center;margin-bottom:60px;position:relative}
+.header::after{content:'';position:absolute;bottom:-30px;left:50%;transform:translateX(-50%);width:80px;height:3px;background:linear-gradient(90deg,var(--accent-green),var(--accent-teal));border-radius:2px}
+h1{font-family:'DM Serif Display',serif;font-size:clamp(2rem,5vw,3.2rem);font-weight:400;line-height:1.2;background:linear-gradient(135deg,#fff 0%,#c8d6e5 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.header p{font-size:1.05rem;color:var(--text-muted);font-weight:300;max-width:600px;margin:16px auto 0;line-height:1.6}
+.section-label{display:inline-flex;align-items:center;gap:8px;font-size:0.75rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;margin-bottom:14px}
+.section-label .dot{width:8px;height:8px;border-radius:50%}
+.info-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:40px}
+@media(max-width:700px){.info-grid{grid-template-columns:1fr}}
+.info-card{background:rgba(255,255,255,0.02);border:1px solid var(--card-border);border-radius:14px;padding:24px;transition:border-color 0.3s}
+.info-card:hover{border-color:rgba(255,255,255,0.1)}
+.info-card.bad{border-left:3px solid var(--accent-red)}
+.info-card.good{border-left:3px solid var(--accent-green)}
+.info-card.info{border-left:3px solid var(--accent-teal)}
+.info-card h3{font-size:1rem;font-weight:600;margin-bottom:8px}
+.info-card.bad h3{color:var(--accent-red)}
+.info-card.good h3{color:var(--accent-green)}
+.info-card.info h3{color:var(--accent-teal)}
+.info-card p{font-size:0.88rem;color:var(--text-muted);line-height:1.6;font-weight:300}
+.chart-card{background:var(--card);border:1px solid var(--card-border);border-radius:20px;padding:36px 32px 28px;position:relative;overflow:hidden;margin-bottom:40px}
+.chart-card::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.08),transparent)}
+.chart-title{font-family:'DM Serif Display',serif;font-size:1.5rem;margin-bottom:6px}
+.chart-subtitle{color:var(--text-muted);font-size:0.9rem;font-weight:300;margin-bottom:28px;line-height:1.5}
+.timeline{display:flex;flex-direction:column;gap:0;position:relative}
+.timeline::before{content:'';position:absolute;left:18px;top:24px;bottom:24px;width:2px;background:var(--card-border)}
+.timeline-item{display:flex;gap:20px;padding:16px 0;position:relative}
+.timeline-dot{width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:0.75rem;flex-shrink:0;z-index:1}
+.dot-prep{background:rgba(255,169,77,0.15);color:var(--accent-orange)}
+.dot-meal{background:rgba(81,207,102,0.15);color:var(--accent-green)}
+.dot-train{background:rgba(56,217,169,0.15);color:var(--accent-teal)}
+.timeline-content{flex:1}
+.timeline-time{font-size:0.78rem;color:var(--text-dim);font-weight:400;margin-bottom:2px}
+.timeline-title{font-weight:600;font-size:0.95rem;margin-bottom:4px}
+.timeline-desc{font-size:0.85rem;color:var(--text-muted);font-weight:300;line-height:1.5}
+.source-list{list-style:none;display:flex;flex-direction:column;gap:12px}
+.source-item{display:flex;justify-content:space-between;align-items:center;padding:16px 20px;background:rgba(255,255,255,0.02);border:1px solid var(--card-border);border-radius:12px}
+.source-item:hover{border-color:rgba(255,255,255,0.1)}
+.source-name{font-weight:500;font-size:0.95rem}
+.source-detail{font-size:0.82rem;color:var(--text-muted);font-weight:300;margin-top:2px}
+.source-badge{font-size:0.82rem;font-weight:600;padding:4px 12px;border-radius:8px;white-space:nowrap}
+.badge-starch{color:var(--accent-green);background:rgba(81,207,102,0.12)}
+.badge-sugar{color:var(--accent-orange);background:rgba(255,169,77,0.12)}
+.badge-extra{color:var(--accent-teal);background:rgba(56,217,169,0.12)}
+.warning-box{background:linear-gradient(135deg,rgba(255,107,107,0.08),rgba(255,169,77,0.06));border:1px solid rgba(255,107,107,0.2);border-radius:16px;padding:28px 30px;margin-top:40px;display:flex;gap:18px;align-items:flex-start}
+.warning-icon{font-size:1.6rem;flex-shrink:0;margin-top:2px}
+.warning-box h3{font-size:1rem;font-weight:600;color:var(--accent-orange);margin-bottom:6px}
+.warning-box p{font-size:0.88rem;color:var(--text-muted);line-height:1.6;font-weight:300}
+.summary{text-align:center;margin-top:50px;padding:30px}
+.summary p{color:var(--text-muted);font-size:0.95rem;line-height:1.7;max-width:650px;margin:0 auto;font-weight:300}
+.summary .highlight{color:var(--accent-teal);font-weight:500}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1>Carb-Loading vor dem Training</h1>
+    <p>Volle Glykogenspeicher bedeuten mehr Kraft, mehr Ausdauer und bessere Pumps. Aber nicht jedes Kohlenhydrat landet dort, wo du es brauchst.</p>
+  </div>
+
+  <div class="section-label">
+    <span class="dot" style="background:var(--accent-teal)"></span>
+    <span style="color:var(--accent-teal)">Das Prinzip</span>
+  </div>
+
+  <div class="info-grid">
+    <div class="info-card good">
+      <h3>Glukose → Muskelglykogen</h3>
+      <p>Stärkehaltige Kohlenhydrate werden zu Glukose abgebaut. Glukose füllt direkt die Glykogenspeicher in der Muskulatur. Volle Speicher bedeuten mehr verfügbare Energie beim Training – du kannst härter und länger trainieren, bevor du einbrichst.</p>
+    </div>
+    <div class="info-card bad">
+      <h3>Fruktose → Leberglykogen</h3>
+      <p>Obst und Fruchtsäfte enthalten hauptsächlich Fruktose. Fruktose wird in der Leber verarbeitet und füllt vorrangig die Leberglykogenspeicher – nicht die Muskeln. Für die Trainingsleistung bringt das wenig. Obst ist gesund und sollte immer mit drin sein.</p>
+    </div>
+  </div>
+
+  <div class="section-label" style="margin-top:50px">
+    <span class="dot" style="background:var(--accent-green)"></span>
+    <span style="color:var(--accent-green)">Die besten Quellen</span>
+  </div>
+
+  <div class="chart-card">
+    <div class="chart-title">Kohlenhydratquellen für volle Speicher</div>
+    <div class="chart-subtitle">Stärkehaltige Lebensmittel, die Glukose liefern und direkt in die Muskulatur gehen.</div>
+    <ul class="source-list">
+      <li class="source-item">
+        <div><span class="source-name">Reis (weiß)</span><div class="source-detail">Schnell verdaulich, kaum Fett, leicht portionierbar</div></div>
+        <span class="source-badge badge-starch">Stärke</span>
+      </li>
+      <li class="source-item">
+        <div><span class="source-name">Haferflocken</span><div class="source-detail">Langsamer aber nachhaltiger, ideal für Mahlzeiten vor dem Schlafengehen</div></div>
+        <span class="source-badge badge-starch">Stärke</span>
+      </li>
+      <li class="source-item">
+        <div><span class="source-name">Kartoffeln</span><div class="source-detail">Hohe Sättigung, Glukose-Freisetzung aufgrund des Volumens teilweise verzögert</div></div>
+        <span class="source-badge badge-starch">Stärke</span>
+      </li>
+      <li class="source-item">
+        <div><span class="source-name">Reissirup / Reiswaffeln</span><div class="source-detail">Fast reine Glukose, perfekt kurz vor oder nach dem Training</div></div>
+        <span class="source-badge badge-sugar">Schnell</span>
+      </li>
+      <li class="source-item">
+        <div><span class="source-name">Brot / Toast</span><div class="source-detail">Weißbrot liefert schnelle Glukose, echtes Vollkorn liefert langsamer Energie</div></div>
+        <span class="source-badge badge-starch">Stärke</span>
+      </li>
+      <li class="source-item">
+        <div><span class="source-name">Nudeln</span><div class="source-detail">Klassiker, gut kombinierbar, große Portionen möglich</div></div>
+        <span class="source-badge badge-starch">Stärke</span>
+      </li>
+    </ul>
+  </div>
+
+  <div class="section-label" style="margin-top:50px">
+    <span class="dot" style="background:var(--accent-orange)"></span>
+    <span style="color:var(--accent-orange)">Timing</span>
+  </div>
+
+  <div class="chart-card">
+    <div class="chart-title">Wann laden – eine Timeline</div>
+    <div class="chart-subtitle">Glykogenspeicher brauchen 12-18 Stunden um sich komplett zu füllen. Plane entsprechend voraus.</div>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-dot dot-prep">-18h</div>
+        <div class="timeline-content">
+          <div class="timeline-time">Vorabend – ca. 18 Stunden vorher</div>
+          <div class="timeline-title">Große Carb-Mahlzeit</div>
+          <div class="timeline-desc">Reis, Kartoffeln oder Nudeln als Hauptquelle. 150-200g Kohlenhydrate in einer Mahlzeit. Das ist der Hauptteil deiner Ladung.</div>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot dot-meal">-3h</div>
+        <div class="timeline-content">
+          <div class="timeline-time">3 Stunden vor dem Training</div>
+          <div class="timeline-title">Letzte vollständige Mahlzeit</div>
+          <div class="timeline-desc">Moderate Carb-Menge (80-100g) mit etwas Protein. Haferflocken mit Proteinpulver oder Reis mit Hähnchen. Wenig Fett, damit die Verdauung nicht bremst.</div>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot dot-meal">-1h</div>
+        <div class="timeline-content">
+          <div class="timeline-time">60 Minuten vor dem Training</div>
+          <div class="timeline-title">Schneller Carb-Snack (optional)</div>
+          <div class="timeline-desc">Reiswaffeln, eine Banane oder Reissirup mit etwas Salz. Schnelle Glukose für sofortige Energie. Nicht zu viel – du willst keinen vollen Magen beim Training.</div>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot dot-train">0h</div>
+        <div class="timeline-content">
+          <div class="timeline-time">Trainingsstart</div>
+          <div class="timeline-title">Volle Speicher, volle Leistung</div>
+          <div class="timeline-desc">Deine Glykogenspeicher sind gefüllt. Mehr Kraft, bessere Pumps, längere Ausdauer. Du wirst den Unterschied spüren.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-label" style="margin-top:50px">
+    <span class="dot" style="background:var(--accent-teal)"></span>
+    <span style="color:var(--accent-teal)">Extra-Tipps</span>
+  </div>
+
+  <div class="info-grid">
+    <div class="info-card info">
+      <h3>Mehr Salz, mehr Wasser</h3>
+      <p>Kohlenhydrate binden Wasser im Muskel. Damit das funktioniert, brauchst du genug Flüssigkeit und Elektrolyte. Am Ladetag: Extra Salz zum Essen, 3+ Liter Wasser. Das Ergebnis: vollere Muskeln und bessere Kontraktionen.</p>
+    </div>
+    <div class="info-card info">
+      <h3>Kokoswasser oder Rote-Beete-Saft</h3>
+      <p>Kokoswasser liefert natürliche Elektrolyte (Kalium, Magnesium). Rote-Beete-Saft enthält Nitrate, die die Durchblutung verbessern können. Beides optional, aber eine sinnvolle Ergänzung am Tag vor einem harten Training.</p>
+    </div>
+  </div>
+
+  <div class="warning-box">
+    <div class="warning-icon" aria-hidden="true">&#9888;&#65039;</div>
+    <div>
+      <h3>Nicht übertreiben</h3>
+      <p>Carb-Loading ist kein Freifahrtschein zum Überessen. Das Ziel sind volle Glykogenspeicher, nicht volle Fettzellen. Halte dich an stärkehaltige Quellen und vermeide den Fehler, „Carb-Loading" als Ausrede für Pizza, Eis und Süßigkeiten zu nutzen. Geplant laden, nicht unkontrolliert essen.</p>
+    </div>
+  </div>
+
+  <div class="summary">
+    <p>Für maximale Trainingsleistung: <span class="highlight">Stärkehaltige Carbs ab dem Vorabend, genug Wasser und Salz, und Fruktose ergänzen.</span> </p>
+  </div>
+</div>
+</body>
+</html>

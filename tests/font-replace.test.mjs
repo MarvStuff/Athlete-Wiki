@@ -53,10 +53,10 @@ describe('checkExternalResources', () => {
     expect(issues[0]).toContain('External script');
   });
 
-  it('allows cloudflareinsights scripts', () => {
+  it('flags cloudflareinsights scripts as external', () => {
     const html = '<script src="https://static.cloudflareinsights.com/beacon.min.js"></script>';
     const issues = checkExternalResources(html, 'test.html');
-    expect(issues.length).toBe(0);
+    expect(issues.length).toBe(1);
   });
 
   it('allows local scripts', () => {

@@ -1,0 +1,192 @@
+<!--
+title: Muskel gezerrt – wann wieder trainieren?
+date: 2026-02-11
+tags: gesundheit, verletzung, regeneration, comeback, muskelzerrung
+category: gesundheit
+status: published
+slug: verletzungspause
+summary: Wann du nach einer Muskelzerrung wieder trainieren darfst, welche Bewegung die Heilung fördert und wie das Comeback aussehen sollte.
+keywords: muskelzerrung, trainieren nach verletzung, comeback training, zerrung
+-->
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Verletzungspause – Athlete Wiki</title>
+<style>
+@font-face{font-family:'DM Serif Display';font-style:normal;font-weight:400;font-display:swap;src:url('/fonts/dm-serif-display-regular.woff2') format('woff2')}
+@font-face{font-family:'Outfit';font-style:normal;font-weight:300;font-display:swap;src:url('/fonts/outfit-300.woff2') format('woff2')}
+@font-face{font-family:'Outfit';font-style:normal;font-weight:400;font-display:swap;src:url('/fonts/outfit-400.woff2') format('woff2')}
+@font-face{font-family:'Outfit';font-style:normal;font-weight:500;font-display:swap;src:url('/fonts/outfit-500.woff2') format('woff2')}
+@font-face{font-family:'Outfit';font-style:normal;font-weight:600;font-display:swap;src:url('/fonts/outfit-600.woff2') format('woff2')}
+@font-face{font-family:'Outfit';font-style:normal;font-weight:700;font-display:swap;src:url('/fonts/outfit-700.woff2') format('woff2')}
+:root{--bg:#0f1923;--card:#162231;--card-border:#1e3044;--accent-orange:#ffa94d;--accent-teal:#38d9a9;--accent-red:#ff6b6b;--accent-green:#51cf66;--text:#e8edf2;--text-muted:#8899aa;--text-dim:#556677}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--text);font-family:'Outfit',sans-serif;min-height:100vh;overflow-x:hidden}
+.container{max-width:1100px;margin:0 auto;padding:50px 30px 80px}
+.header{text-align:center;margin-bottom:60px;position:relative}
+.header::after{content:'';position:absolute;bottom:-30px;left:50%;transform:translateX(-50%);width:80px;height:3px;background:linear-gradient(90deg,var(--accent-red),var(--accent-teal));border-radius:2px}
+h1{font-family:'DM Serif Display',serif;font-size:clamp(2rem,5vw,3.2rem);font-weight:400;line-height:1.2;background:linear-gradient(135deg,#fff 0%,#c8d6e5 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.header p{font-size:1.05rem;color:var(--text-muted);font-weight:300;max-width:600px;margin:16px auto 0;line-height:1.6}
+.section-label{display:inline-flex;align-items:center;gap:8px;font-size:0.75rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;margin-bottom:14px}
+.section-label .dot{width:8px;height:8px;border-radius:50%}
+.phase-timeline{display:flex;flex-direction:column;gap:0;margin-bottom:40px}
+.phase{background:rgba(255,255,255,0.02);border:1px solid var(--card-border);padding:28px 28px 24px;position:relative}
+.phase:first-child{border-radius:16px 16px 0 0}
+.phase:last-child{border-radius:0 0 16px 16px}
+.phase:not(:last-child){border-bottom:none}
+.phase-header{display:flex;align-items:center;gap:14px;margin-bottom:10px}
+.phase-number{width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:0.9rem;flex-shrink:0}
+.phase-1 .phase-number{background:rgba(255,107,107,0.15);color:var(--accent-red)}
+.phase-2 .phase-number{background:rgba(255,169,77,0.15);color:var(--accent-orange)}
+.phase-3 .phase-number{background:rgba(56,217,169,0.15);color:var(--accent-teal)}
+.phase-4 .phase-number{background:rgba(81,207,102,0.15);color:var(--accent-green)}
+.phase-title{font-weight:600;font-size:1.05rem}
+.phase-1 .phase-title{color:var(--accent-red)}
+.phase-2 .phase-title{color:var(--accent-orange)}
+.phase-3 .phase-title{color:var(--accent-teal)}
+.phase-4 .phase-title{color:var(--accent-green)}
+.phase-time{font-size:0.78rem;color:var(--text-dim);font-weight:400;margin-left:auto}
+.phase p{font-size:0.88rem;color:var(--text-muted);line-height:1.6;font-weight:300;padding-left:50px}
+.info-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:40px}
+@media(max-width:700px){.info-grid{grid-template-columns:1fr}}
+.info-card{background:rgba(255,255,255,0.02);border:1px solid var(--card-border);border-radius:14px;padding:24px;transition:border-color 0.3s}
+.info-card:hover{border-color:rgba(255,255,255,0.1)}
+.info-card.bad{border-left:3px solid var(--accent-red)}
+.info-card.good{border-left:3px solid var(--accent-green)}
+.info-card h3{font-size:1rem;font-weight:600;margin-bottom:8px}
+.info-card.bad h3{color:var(--accent-red)}
+.info-card.good h3{color:var(--accent-green)}
+.info-card p{font-size:0.88rem;color:var(--text-muted);line-height:1.6;font-weight:300}
+.chart-card{background:var(--card);border:1px solid var(--card-border);border-radius:20px;padding:36px 32px 28px;position:relative;overflow:hidden;margin-bottom:40px}
+.chart-card::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.08),transparent)}
+.chart-title{font-family:'DM Serif Display',serif;font-size:1.5rem;margin-bottom:6px}
+.chart-subtitle{color:var(--text-muted);font-size:0.9rem;font-weight:300;margin-bottom:28px;line-height:1.5}
+.comeback-list{list-style:none;display:flex;flex-direction:column;gap:12px}
+.comeback-item{display:flex;justify-content:space-between;align-items:center;padding:16px 20px;background:rgba(255,255,255,0.02);border:1px solid var(--card-border);border-radius:12px}
+.comeback-item:hover{border-color:rgba(255,255,255,0.1)}
+.comeback-name{font-weight:500;font-size:0.95rem}
+.comeback-detail{font-size:0.82rem;color:var(--text-muted);font-weight:300;margin-top:2px}
+.comeback-badge{font-size:0.82rem;font-weight:600;padding:4px 12px;border-radius:8px;white-space:nowrap}
+.badge-week1{color:var(--accent-orange);background:rgba(255,169,77,0.12)}
+.badge-week2{color:var(--accent-teal);background:rgba(56,217,169,0.12)}
+.badge-week3{color:var(--accent-green);background:rgba(81,207,102,0.12)}
+.warning-box{background:linear-gradient(135deg,rgba(255,107,107,0.08),rgba(255,169,77,0.06));border:1px solid rgba(255,107,107,0.2);border-radius:16px;padding:28px 30px;margin-top:40px;display:flex;gap:18px;align-items:flex-start}
+.warning-icon{font-size:1.6rem;flex-shrink:0;margin-top:2px}
+.warning-box h3{font-size:1rem;font-weight:600;color:var(--accent-orange);margin-bottom:6px}
+.warning-box p{font-size:0.88rem;color:var(--text-muted);line-height:1.6;font-weight:300}
+.summary{text-align:center;margin-top:50px;padding:30px}
+.summary p{color:var(--text-muted);font-size:0.95rem;line-height:1.7;max-width:650px;margin:0 auto;font-weight:300}
+.summary .highlight{color:var(--accent-teal);font-weight:500}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1>Muskel gezerrt – wann wieder trainieren?</h1>
+    <p>Eine Zerrung ist kein Todesurteil für deinen Trainingsplan. Aber zu früh wieder einsteigen kann aus einer Woche Pause mehrere Monate machen.</p>
+  </div>
+
+  <div class="section-label">
+    <span class="dot" style="background:var(--accent-red)"></span>
+    <span style="color:var(--accent-red)">Sofortmaßnahme</span>
+  </div>
+
+  <div class="info-grid">
+    <div class="info-card bad">
+      <h3>Sofort aufhören</h3>
+      <p>Wenn du während des Trainings einen stechenden, ziehenden Schmerz im Muskel spürst: Training sofort beenden. Kein „noch ein Satz", kein „das geht schon". Jede weitere Belastung vergrößert den Schaden. Gesundheit geht immer vor.</p>
+    </div>
+    <div class="info-card good">
+      <h3>Leichte Bewegung hilft</h3>
+      <p>Komplette Bettruhe ist veraltet. Leichte Bewegung wie Spazierengehen oder langsames Radfahren fördert die Durchblutung und beschleunigt die Heilung. Wichtig: Nur Bewegung ohne Belastung des betroffenen Muskels.</p>
+    </div>
+  </div>
+
+  <div class="section-label" style="margin-top:50px">
+    <span class="dot" style="background:var(--accent-teal)"></span>
+    <span style="color:var(--accent-teal)">Die 4 Phasen der Heilung</span>
+  </div>
+
+  <div class="phase-timeline">
+    <div class="phase phase-1">
+      <div class="phase-header">
+        <div class="phase-number">1</div>
+        <div class="phase-title">Akutphase</div>
+        <div class="phase-time">Tag 1-3</div>
+      </div>
+      <p>Kein Training der betroffenen Region. Leichte Bewegung wie Gehen oder langsames Radfahren ist erlaubt und sogar sinnvoll. Kühlen in den ersten 24 Stunden, danach Wärme zur Durchblutungsförderung. Nicht betroffene Muskelgruppen dürfen leicht trainiert werden.</p>
+    </div>
+    <div class="phase phase-2">
+      <div class="phase-header">
+        <div class="phase-number">2</div>
+        <div class="phase-title">Erholungsphase</div>
+        <div class="phase-time">Tag 4-7</div>
+      </div>
+      <p>Der Schmerz lässt nach, aber der Muskel ist noch nicht belastbar. Leichtes Dehnen und Mobilisierung starten. Andere Muskelgruppen können normal trainiert werden. Immer auf den Körper hören – wenn es zieht, ist es zu früh.</p>
+    </div>
+    <div class="phase phase-3">
+      <div class="phase-header">
+        <div class="phase-number">3</div>
+        <div class="phase-title">Comeback-Phase</div>
+        <div class="phase-time">Woche 2</div>
+      </div>
+      <p>Langsames Wiedereinstieg mit deutlich reduziertem Gewicht (50% des normalen Arbeitsgewichts). Fokus auf Tempo-Übungen mit kontrollierter Bewegung. Höhere Wiederholungszahlen (15-20) statt schwerer Gewichte. Schmerzfrei bedeutet: kein Stechen, kein Ziehen – Muskelkater ist okay.</p>
+    </div>
+    <div class="phase phase-4">
+      <div class="phase-header">
+        <div class="phase-number">4</div>
+        <div class="phase-title">Normalbetrieb</div>
+        <div class="phase-time">Woche 3+</div>
+      </div>
+      <p>Schrittweise Steigerung zurück zum normalen Gewicht. Pro Trainingseinheit circa 10-15% mehr Gewicht drauflegen. Aufwärmsätze werden wichtiger als je zuvor. Wenn alles schmerzfrei ist, bist du nach 3-4 Wochen wieder auf deinem Level.</p>
+    </div>
+  </div>
+
+  <div class="section-label" style="margin-top:50px">
+    <span class="dot" style="background:var(--accent-green)"></span>
+    <span style="color:var(--accent-green)">Comeback-Protokoll</span>
+  </div>
+
+  <div class="chart-card">
+    <div class="chart-title">Schrittweise zurück zur vollen Leistung</div>
+    <div class="chart-subtitle">Beispiel für ein progressives Comeback nach einer Muskelzerrung im Beinbereich.</div>
+    <ul class="comeback-list">
+      <li class="comeback-item">
+        <div><span class="comeback-name">Woche 1: Nur Mobilität</span><div class="comeback-detail">Gehen, Radfahren, Dehnen – kein Gewicht</div></div>
+        <span class="comeback-badge badge-week1">50%</span>
+      </li>
+      <li class="comeback-item">
+        <div><span class="comeback-name">Woche 2: Leichtes Training</span><div class="comeback-detail">50% Gewicht, 15-20 Wiederholungen, langsames Tempo</div></div>
+        <span class="comeback-badge badge-week1">60%</span>
+      </li>
+      <li class="comeback-item">
+        <div><span class="comeback-name">Woche 3: Moderate Belastung</span><div class="comeback-detail">70% Gewicht, 10-12 Wiederholungen, normales Tempo</div></div>
+        <span class="comeback-badge badge-week2">75%</span>
+      </li>
+      <li class="comeback-item">
+        <div><span class="comeback-name">Woche 4: Fast normal</span><div class="comeback-detail">85-90% Gewicht, normale Sätze und Wiederholungen</div></div>
+        <span class="comeback-badge badge-week3">90%</span>
+      </li>
+      <li class="comeback-item">
+        <div><span class="comeback-name">Woche 5+: Vollgas</span><div class="comeback-detail">100% Gewicht, volle Intensität, extra Aufwärmen beibehalten</div></div>
+        <span class="comeback-badge badge-week3">100%</span>
+      </li>
+    </ul>
+  </div>
+
+  <div class="warning-box">
+    <div class="warning-icon" aria-hidden="true">&#9888;&#65039;</div>
+    <div>
+      <h3>Wann zum Arzt?</h3>
+      <p>Wenn der Schmerz nach 5-7 Tagen nicht deutlich nachlässt, wenn du einen Bluterguss oder eine sichtbare Delle im Muskel siehst, oder wenn du den Muskel kaum bewegen kannst – geh zum Arzt. Eine echte Muskelfaserriss braucht professionelle Behandlung und deutlich längere Heilungszeit.</p>
+    </div>
+  </div>
+
+  <div class="summary">
+    <p>Die wichtigste Regel nach einer Zerrung: <span class="highlight">Geduld schlägt Ehrgeiz.</span> Eine Woche kontrollierte Pause ist besser als drei Monate Zwangspause durch eine verschlimmerte Verletzung.</p>
+  </div>
+</div>
+</body>
+</html>
