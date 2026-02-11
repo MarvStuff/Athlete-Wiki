@@ -1,0 +1,23 @@
+{
+  "name": "athlete-wiki",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Statische Coaching-Website mit durchsuchbarer Artikeluebersicht",
+  "scripts": {
+    "build": "node build.mjs",
+    "dev": "node build.mjs --watch",
+    "preview": "npx serve public -l 3000",
+    "clean": "node -e \"import('fs').then(f=>f.promises.rm('public',{recursive:true,force:true}))\"",
+    "validate": "node build.mjs --validate-only",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0",
+    "fuse.js": "^7.0.0"
+  },
+  "devDependencies": {
+    "chokidar": "^4.0.0",
+    "vitest": "^3.0.0"
+  }
+}

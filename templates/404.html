@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Seite nicht gefunden – Athlete Wiki</title>
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<style>
+@font-face{font-family:'DM Serif Display';font-style:normal;font-weight:400;font-display:swap;src:url('/fonts/dm-serif-display-regular.woff2') format('woff2')}
+@font-face{font-family:'Outfit';font-style:normal;font-weight:300;font-display:swap;src:url('/fonts/outfit-300.woff2') format('woff2')}
+@font-face{font-family:'Outfit';font-style:normal;font-weight:400;font-display:swap;src:url('/fonts/outfit-400.woff2') format('woff2')}
+@font-face{font-family:'Outfit';font-style:normal;font-weight:600;font-display:swap;src:url('/fonts/outfit-600.woff2') format('woff2')}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+body{background:#0c1117;color:#e2e8f0;font-family:'Outfit',sans-serif;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px 20px;text-align:center}
+h1{font-family:'DM Serif Display',serif;font-size:clamp(1.8rem,4vw,2.5rem);font-weight:400;margin-bottom:16px;background:linear-gradient(135deg,#fff,#8899aa);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.subtitle{color:#8899aa;font-size:1rem;font-weight:300;margin-bottom:32px;line-height:1.6}
+.search-form{display:flex;gap:8px;max-width:480px;width:100%;margin-bottom:32px}
+.search-form input{flex:1;padding:14px 18px;background:#111920;border:1px solid #1e2d3d;border-radius:12px;color:#e2e8f0;font-family:'Outfit',sans-serif;font-size:0.95rem;outline:none;transition:border-color 0.2s}
+.search-form input:focus{border-color:#38d9a9}
+.search-form button{padding:14px 24px;background:rgba(56,217,169,0.12);border:1px solid #38d9a9;border-radius:12px;color:#38d9a9;font-family:'Outfit',sans-serif;font-size:0.9rem;font-weight:500;cursor:pointer;transition:background 0.2s}
+.search-form button:hover{background:rgba(56,217,169,0.2)}
+.back-link{color:#8899aa;text-decoration:none;font-size:0.9rem;transition:color 0.2s}
+.back-link:hover{color:#38d9a9}
+.footer-links{margin-top:40px;display:flex;gap:16px}
+.footer-links a{color:#556677;text-decoration:none;font-size:0.75rem;transition:color 0.2s}
+.footer-links a:hover{color:#8899aa}
+</style>
+</head>
+<body>
+<h1>Seite nicht gefunden</h1>
+<p class="subtitle">Der Artikel existiert nicht oder wurde verschoben.<br>Versuch es mit der Suche:</p>
+<form class="search-form" action="/" method="get">
+  <input type="search" name="q" placeholder="Artikel suchen ..." aria-label="Artikel suchen">
+  <button type="submit">Suchen</button>
+</form>
+<a href="/" class="back-link">← Zur Übersicht</a>
+<div class="footer-links">
+  <a href="/impressum.html">Impressum</a>
+  <a href="/datenschutz.html">Datenschutz</a>
+</div>
+</body>
+</html>

@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install:*)",
+      "Bash(node -e:*)",
+      "Bash(node download-fonts.mjs:*)",
+      "Bash(npx vitest run)",
+      "Bash(node build.mjs:*)",
+      "Bash(dir:*)",
+      "Bash(ls -la \"C:\\\\Users\\\\Anwender\\\\Documents\\\\IT\\\\Web-Projekte\\\\Athlete-Wiki\\\\public\"\" && echo \"---PAGES---\" && ls -la \"C:UsersAnwenderDocumentsITWeb-ProjekteAthlete-Wikipublicpages\"\")"
+    ]
+  }
+}

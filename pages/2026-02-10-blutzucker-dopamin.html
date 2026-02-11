@@ -1,0 +1,138 @@
+<!--
+title: Blutzucker & Dopamin – Warum du dich schlapper fühlst
+date: 2026-02-10
+tags: ernährung, zucker, energie, blutzucker, dopamin
+category: ernaehrung
+status: published
+slug: 2026-02-10-blutzucker-dopamin
+summary: Warum du anfangs müde wirst, wenn du Zucker reduzierst – und warum das ein gutes Zeichen ist.
+keywords: müdigkeit, mittagstief, glykämischer index
+-->
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blutzucker & Dopamin – Athlete Wiki</title>
+<style>
+@font-face{font-family:'DM Serif Display';font-style:normal;font-weight:400;font-display:swap;src:url('/fonts/dm-serif-display-regular.woff2') format('woff2')}
+@font-face{font-family:'Outfit';font-style:normal;font-weight:300;font-display:swap;src:url('/fonts/outfit-300.woff2') format('woff2')}
+@font-face{font-family:'Outfit';font-style:normal;font-weight:400;font-display:swap;src:url('/fonts/outfit-400.woff2') format('woff2')}
+@font-face{font-family:'Outfit';font-style:normal;font-weight:500;font-display:swap;src:url('/fonts/outfit-500.woff2') format('woff2')}
+@font-face{font-family:'Outfit';font-style:normal;font-weight:600;font-display:swap;src:url('/fonts/outfit-600.woff2') format('woff2')}
+@font-face{font-family:'Outfit';font-style:normal;font-weight:700;font-display:swap;src:url('/fonts/outfit-700.woff2') format('woff2')}
+:root{--bg:#0f1923;--card:#162231;--card-border:#1e3044;--accent-green:#51cf66;--accent-teal:#38d9a9;--accent-red:#ff6b6b;--accent-orange:#ffa94d;--text:#e8edf2;--text-muted:#8899aa;--text-dim:#556677}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--text);font-family:'Outfit',sans-serif;min-height:100vh;overflow-x:hidden}
+.container{max-width:1100px;margin:0 auto;padding:50px 30px 80px}
+.header{text-align:center;margin-bottom:60px;position:relative}
+.header::after{content:'';position:absolute;bottom:-30px;left:50%;transform:translateX(-50%);width:80px;height:3px;background:linear-gradient(90deg,var(--accent-green),var(--accent-teal));border-radius:2px}
+h1{font-family:'DM Serif Display',serif;font-size:clamp(2rem,5vw,3.2rem);font-weight:400;line-height:1.2;background:linear-gradient(135deg,#fff 0%,#c8d6e5 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.header p{font-size:1.05rem;color:var(--text-muted);font-weight:300;max-width:600px;margin:16px auto 0;line-height:1.6}
+.section-label{display:inline-flex;align-items:center;gap:8px;font-size:0.75rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;margin-bottom:14px}
+.section-label .dot{width:8px;height:8px;border-radius:50%}
+.chart-card{background:var(--card);border:1px solid var(--card-border);border-radius:20px;padding:36px 32px 28px;position:relative;overflow:hidden;margin-bottom:40px}
+.chart-card::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.08),transparent)}
+.chart-title{font-family:'DM Serif Display',serif;font-size:1.5rem;margin-bottom:6px}
+.chart-subtitle{color:var(--text-muted);font-size:0.9rem;font-weight:300;margin-bottom:28px;line-height:1.5}
+.chart-wrapper{width:100%}
+svg.chart{width:100%;height:auto;display:block}
+.info-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:30px}
+@media(max-width:700px){.info-grid{grid-template-columns:1fr}}
+.info-card{background:rgba(255,255,255,0.02);border:1px solid var(--card-border);border-radius:14px;padding:24px;transition:border-color 0.3s}
+.info-card:hover{border-color:rgba(255,255,255,0.1)}
+.info-card.bad{border-left:3px solid var(--accent-red)}
+.info-card.good{border-left:3px solid var(--accent-green)}
+.info-card h3{font-size:1rem;font-weight:600;margin-bottom:8px}
+.info-card.bad h3{color:var(--accent-red)}
+.info-card.good h3{color:var(--accent-green)}
+.info-card p{font-size:0.88rem;color:var(--text-muted);line-height:1.6;font-weight:300}
+.warning-box{background:linear-gradient(135deg,rgba(255,107,107,0.08),rgba(255,169,77,0.06));border:1px solid rgba(255,107,107,0.2);border-radius:16px;padding:28px 30px;margin-top:50px;display:flex;gap:18px;align-items:flex-start}
+.warning-icon{font-size:1.6rem;flex-shrink:0;margin-top:2px}
+.warning-box h3{font-size:1rem;font-weight:600;color:var(--accent-orange);margin-bottom:6px}
+.warning-box p{font-size:0.88rem;color:var(--text-muted);line-height:1.6;font-weight:300}
+.summary{text-align:center;margin-top:50px;padding:30px}
+.summary p{color:var(--text-muted);font-size:0.95rem;line-height:1.7;max-width:650px;margin:0 auto;font-weight:300}
+.summary .highlight{color:var(--accent-teal);font-weight:500}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1>Blutzucker & Dopamin</h1>
+    <p>Warum du anfangs müde wirst, wenn du Zucker reduzierst – und warum das ein gutes Zeichen ist.</p>
+  </div>
+
+  <div class="section-label">
+    <span class="dot" style="background:var(--accent-green)"></span>
+    <span style="color:var(--accent-green)">Mechanismus 1</span>
+  </div>
+
+  <div class="chart-card">
+    <div class="chart-title">Blutzucker-Achterbahn</div>
+    <div class="chart-subtitle">Was passiert, wenn du den ganzen Tag Zucker isst – und was, wenn du stabile Quellen wählst.</div>
+    <div class="chart-wrapper">
+      <svg class="chart" viewBox="0 0 900 320" aria-hidden="true">
+        <line x1="80" y1="280" x2="860" y2="280" stroke="#1e3044" stroke-width="1"/>
+        <line x1="80" y1="40" x2="80" y2="280" stroke="#1e3044" stroke-width="1"/>
+        <text x="40" y="170" fill="#556677" font-size="11" font-family="Outfit" text-anchor="middle" transform="rotate(-90,40,170)">Blutzucker</text>
+        <text x="470" y="310" fill="#556677" font-size="11" font-family="Outfit" text-anchor="middle">Tagesverlauf</text>
+        <path d="M80,200 Q200,40 300,200 Q400,300 500,100 Q600,280 700,180 Q800,60 860,200" fill="none" stroke="#ff6b6b" stroke-width="2.5" stroke-linecap="round"/>
+        <path d="M80,180 Q250,150 400,160 Q550,170 700,155 Q800,150 860,160" fill="none" stroke="#51cf66" stroke-width="2.5" stroke-linecap="round"/>
+        <rect x="300" y="65" width="140" height="24" rx="6" fill="rgba(255,107,107,0.15)"/>
+        <text x="370" y="82" fill="#ff6b6b" font-size="11" font-family="Outfit" text-anchor="middle">Zucker-Crash</text>
+        <rect x="520" y="125" width="160" height="24" rx="6" fill="rgba(81,207,102,0.15)"/>
+        <text x="600" y="142" fill="#51cf66" font-size="11" font-family="Outfit" text-anchor="middle">Stabile Energie</text>
+      </svg>
+    </div>
+  </div>
+
+  <div class="info-grid">
+    <div class="info-card bad">
+      <h3>Vorher: Die Achterbahn</h3>
+      <p>Schnelle Kohlenhydrate treiben deinen Blutzucker hoch. Dein Körper schüttet Insulin aus, der Zucker fällt rapide ab. Du fühlst dich müde, unkonzentriert und greifst zum nächsten Snack.</p>
+    </div>
+    <div class="info-card good">
+      <h3>Nachher: Stabile Kurve</h3>
+      <p>Komplexe Kohlenhydrate, Protein und Fett sorgen für einen langsamen, gleichmäßigen Anstieg. Kein Crash, kein Mittagstief. Dein Energielevel bleibt den ganzen Tag konstant.</p>
+    </div>
+  </div>
+
+  <div class="section-label" style="margin-top:50px">
+    <span class="dot" style="background:var(--accent-orange)"></span>
+    <span style="color:var(--accent-orange)">Mechanismus 2</span>
+  </div>
+
+  <div class="chart-card">
+    <div class="chart-title">Dopamin-Anpassung</div>
+    <div class="chart-subtitle">Dein Belohnungssystem braucht 2-4 Wochen, um sich an weniger Zucker zu gewöhnen.</div>
+    <div class="chart-wrapper">
+      <svg class="chart" viewBox="0 0 900 280" aria-hidden="true">
+        <line x1="80" y1="240" x2="860" y2="240" stroke="#1e3044" stroke-width="1"/>
+        <text x="120" y="265" fill="#556677" font-size="11" font-family="Outfit">Tag 1</text>
+        <text x="300" y="265" fill="#556677" font-size="11" font-family="Outfit">Woche 1</text>
+        <text x="500" y="265" fill="#556677" font-size="11" font-family="Outfit">Woche 2</text>
+        <text x="700" y="265" fill="#556677" font-size="11" font-family="Outfit">Woche 4</text>
+        <path d="M100,80 Q200,200 350,180 Q500,160 650,120 Q780,90 860,80" fill="none" stroke="#ffa94d" stroke-width="2.5" stroke-linecap="round"/>
+        <rect x="150" y="170" width="100" height="24" rx="6" fill="rgba(255,169,77,0.15)"/>
+        <text x="200" y="187" fill="#ffa94d" font-size="11" font-family="Outfit" text-anchor="middle">Tief-Phase</text>
+        <rect x="660" y="60" width="120" height="24" rx="6" fill="rgba(56,217,169,0.15)"/>
+        <text x="720" y="77" fill="#38d9a9" font-size="11" font-family="Outfit" text-anchor="middle">Neue Baseline</text>
+      </svg>
+    </div>
+  </div>
+
+  <div class="warning-box">
+    <div class="warning-icon" aria-hidden="true">&#9888;&#65039;</div>
+    <div>
+      <h3>Wichtig: Durchhalten lohnt sich</h3>
+      <p>Die erste Woche ist die härteste. Dein Körper vermisst den schnellen Zucker-Kick. Das ist kein Zeichen, dass dir etwas fehlt – es ist ein Zeichen, dass sich dein System umstellt. Nach 2-4 Wochen normalisiert sich dein Dopamin-Level und natürliche Belohnungen fühlen sich wieder stärker an.</p>
+    </div>
+  </div>
+
+  <div class="summary">
+    <p>Die kurze Müdigkeit am Anfang ist ein <span class="highlight">Zeichen der Umstellung, nicht des Mangels.</span> Dein Körper lernt, aus stabileren Quellen Energie zu ziehen.</p>
+  </div>
+</div>
+</body>
+</html>

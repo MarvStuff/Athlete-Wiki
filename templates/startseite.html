@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Athlete Wiki – Coaching-Wissen durchsuchen</title>
+<meta name="description" content="Durchsuche {{count}} Coaching-Artikel zu Ernährung, Training, Regeneration und mehr.">
+<link rel="canonical" href="{{siteUrl}}/">
+<meta property="og:title" content="Athlete Wiki">
+<meta property="og:description" content="Coaching-Wissen durchsuchen – {{count}} Artikel">
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{siteUrl}}/">
+<meta property="og:image" content="{{siteUrl}}/og-default.png">
+<meta property="og:site_name" content="{{siteName}}">
+<meta property="og:locale" content="de_DE">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" href="/icon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="/icon-192.png">
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#38d9a9">
+<link rel="preload" href="/fonts/outfit-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/dm-serif-display-regular.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:'DM Serif Display';font-style:normal;font-weight:400;font-display:swap;src:url('/fonts/dm-serif-display-regular.woff2') format('woff2')}
+@font-face{font-family:'Outfit';font-style:normal;font-weight:300;font-display:swap;src:url('/fonts/outfit-300.woff2') format('woff2')}
+@font-face{font-family:'Outfit';font-style:normal;font-weight:400;font-display:swap;src:url('/fonts/outfit-400.woff2') format('woff2')}
+@font-face{font-family:'Outfit';font-style:normal;font-weight:500;font-display:swap;src:url('/fonts/outfit-500.woff2') format('woff2')}
+@font-face{font-family:'Outfit';font-style:normal;font-weight:600;font-display:swap;src:url('/fonts/outfit-600.woff2') format('woff2')}
+@font-face{font-family:'Outfit';font-style:normal;font-weight:700;font-display:swap;src:url('/fonts/outfit-700.woff2') format('woff2')}
+
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+
+:root{
+  --bg:#0c1117;
+  --bg-card:#1a2332;
+  --border:#1e2d3d;
+  --border-hover:#2a3f55;
+  --accent:#38d9a9;
+  --accent-dim:rgba(56,217,169,0.12);
+  --text:#e2e8f0;
+  --text-secondary:#8899aa;
+  --text-dim:#556677;
+  --cat-ernaehrung:#51cf66;
+  --cat-training:#ffa94d;
+  --cat-regeneration:#74c0fc;
+  --cat-mindset:#cc5de8;
+  --cat-gesundheit:#ff6b6b;
+  --cat-wettkampf:#ffd43b;
+  --cat-allgemein:#868e96;
+  --font-heading:'DM Serif Display',serif;
+  --font-body:'Outfit',sans-serif;
+  --radius:16px;
+  --max-width:720px;
+}
+
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:var(--font-body);font-weight:400;line-height:1.6;min-height:100vh;-webkit-font-smoothing:antialiased}
+
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:0.01ms !important;transition-duration:0.01ms !important}
+  html{scroll-behavior:auto}
+}
+
+.skip-link{position:absolute;top:-100%;left:16px;background:var(--accent);color:var(--bg);padding:8px 16px;border-radius:8px;font-size:0.85rem;font-weight:500;z-index:100;text-decoration:none}
+.skip-link:focus{top:16px}
+
+.hero{text-align:center;padding:80px 20px 40px}
+.hero h1{font-family:var(--font-heading);font-size:clamp(2.2rem,6vw,3.5rem);font-weight:400;line-height:1.1;background:linear-gradient(135deg,#fff 0%,#8899aa 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero-subtitle{font-size:clamp(1rem,2.5vw,1.15rem);color:var(--text-secondary);font-weight:300;margin-top:12px}
+.hero-count{font-size:0.75rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--text-dim);margin-top:20px}
+
+.search-section{max-width:var(--max-width);margin:0 auto;padding:0 20px}
+.search-wrapper{position:relative}
+.search-icon{position:absolute;left:20px;top:50%;transform:translateY(-50%);width:20px;height:20px;color:var(--text-dim);pointer-events:none}
+#search{width:100%;padding:18px 20px 18px 52px;background:#111920;border:1px solid var(--border);border-radius:var(--radius);color:var(--text);font-family:var(--font-body);font-size:1.05rem;font-weight:400;outline:none;transition:border-color 0.2s,box-shadow 0.2s}
+#search::placeholder{color:var(--text-dim)}
+#search:focus{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-dim)}
+.search-hint{font-size:0.78rem;color:var(--text-dim);margin-top:10px;text-align:center}
+
+.filter-section{max-width:var(--max-width);margin:28px auto 0;padding:0 20px}
+.filter-chips{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch;padding-bottom:4px}
+.filter-chips::-webkit-scrollbar{display:none}
+.filter-chip{flex-shrink:0;padding:8px 16px;border:1px solid var(--border);border-radius:100px;background:transparent;color:var(--text-secondary);font-family:var(--font-body);font-size:0.82rem;font-weight:400;cursor:pointer;transition:border-color 0.2s,background 0.2s,color 0.2s;white-space:nowrap;min-height:44px;display:inline-flex;align-items:center;gap:6px}
+.filter-chip:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.filter-chip[aria-checked="true"]{border-color:var(--chip-color,var(--accent));background:color-mix(in srgb,var(--chip-color,var(--accent)) 12%,transparent);color:var(--chip-color,var(--accent))}
+.chip-count{font-size:0.72rem;opacity:0.7}
+
+.results-section{max-width:var(--max-width);margin:32px auto 0;padding:0 20px 80px}
+.results-header{font-size:0.78rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-dim);margin-bottom:20px}
+
+.article-card{display:block;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:24px 28px;margin-bottom:12px;text-decoration:none;color:inherit;transition:border-color 0.25s,transform 0.15s,box-shadow 0.25s;position:relative;opacity:0;animation:fadeUp 0.4s ease-out forwards}
+.article-card:hover,.article-card:focus-visible{border-color:var(--border-hover);transform:translateY(-1px);box-shadow:0 4px 24px rgba(0,0,0,0.3)}
+.article-card:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.article-card:hover .card-title{color:var(--accent)}
+.article-card:hover .card-arrow{opacity:1;transform:translateX(3px)}
+@keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+
+.card-meta{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.card-date{font-size:0.82rem;color:var(--text-dim)}
+.card-category{font-size:0.72rem;font-weight:600;letter-spacing:1px;text-transform:uppercase;padding:3px 10px;border-radius:6px}
+.card-title{font-family:var(--font-heading);font-size:clamp(1.15rem,2vw,1.3rem);font-weight:400;line-height:1.3;transition:color 0.2s;margin-bottom:8px}
+.card-summary{font-size:0.9rem;font-weight:300;color:var(--text-secondary);line-height:1.5;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;margin-bottom:14px}
+.card-tags{display:flex;flex-wrap:wrap;gap:6px}
+.card-tag{font-size:0.72rem;color:var(--text-dim);background:var(--accent-dim);padding:3px 10px;border-radius:6px}
+.card-arrow{position:absolute;right:24px;bottom:24px;font-size:1.2rem;color:var(--text-dim);opacity:0;transition:opacity 0.2s,transform 0.2s}
+
+.empty-state{text-align:center;padding:60px 20px}
+.empty-icon{font-size:2.5rem;display:block;margin-bottom:16px}
+.empty-state p{color:var(--text-secondary);font-size:1rem;font-weight:400}
+.empty-hint{color:var(--text-dim);font-size:0.88rem;font-weight:300;margin-top:8px}
+
+.site-footer{max-width:var(--max-width);margin:0 auto;padding:24px 20px;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;font-size:0.8rem;color:var(--text-dim);font-weight:300}
+.site-footer a{color:var(--text-dim);text-decoration:none;transition:color 0.2s}
+.site-footer a:hover{color:var(--text-secondary)}
+.site-footer nav{display:flex;gap:16px}
+
+@media(max-width:768px){
+  .hero{padding:60px 20px 32px}
+  .article-card{padding:18px 20px}
+  .card-arrow{display:none}
+}
+@media(max-width:480px){
+  .hero{padding:48px 16px 24px}
+  .hero-count{margin-top:14px}
+  .search-section,.filter-section,.results-section{padding-left:16px;padding-right:16px}
+  .site-footer{flex-direction:column;gap:8px;text-align:center}
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebSite",
+  "name":"{{siteName}}",
+  "url":"{{siteUrl}}",
+  "potentialAction":{
+    "@type":"SearchAction",
+    "target":"{{siteUrl}}/?q={search_term_string}",
+    "query-input":"required name=search_term_string"
+  }
+}
+</script>
+</head>
+<body>
+<a href="#search" class="skip-link">Zum Suchfeld springen</a>
+
+<main>
+  <header class="hero" role="banner">
+    <h1>Athlete Wiki</h1>
+    <p class="hero-subtitle">Coaching-Wissen durchsuchen</p>
+    <p class="hero-count">{{count}} Artikel</p>
+  </header>
+
+  <section class="search-section" aria-label="Artikelsuche">
+    <div class="search-wrapper">
+      <svg class="search-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <input id="search" type="search" placeholder="Suche nach Thema, Tag, Stichwort ..." autocomplete="off" aria-label="Artikel durchsuchen" aria-describedby="search-hint">
+    </div>
+    <p id="search-hint" class="search-hint">Durchsucht Titel, Tags, Kategorien und Artikeltext</p>
+  </section>
+
+  <nav class="filter-section" aria-label="Kategorie-Filter">
+    <div id="filter-chips" class="filter-chips" role="radiogroup" aria-label="Kategorie wählen">
+    </div>
+  </nav>
+
+  <section class="results-section" aria-label="Suchergebnisse">
+    <p id="results-header" class="results-header" aria-live="polite" aria-atomic="true">Alle Artikel</p>
+    <div id="results" class="results-list" role="list"></div>
+    <div id="empty-state" class="empty-state" hidden>
+      <span class="empty-icon" aria-hidden="true">&#128270;</span>
+      <p>Keine Artikel gefunden.</p>
+      <p class="empty-hint">Versuch einen anderen Suchbegriff oder entferne den Filter.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <span>Athlete Wiki</span>
+  <nav aria-label="Rechtliches">
+    <a href="/impressum.html">Impressum</a>
+    <a href="/datenschutz.html">Datenschutz</a>
+  </nav>
+</footer>
+
+<noscript>
+  <p style="text-align:center;padding:40px 20px;color:#8899aa;font-family:'Outfit',sans-serif">
+    Bitte aktiviere JavaScript, um die Artikelsuche zu nutzen.
+  </p>
+</noscript>
+
+<script src="/fuse.min.js" defer></script>
+<script>
+(async function(){
+  'use strict';
+
+  const DEBOUNCE_MS=150;
+  const MIN_CHARS=2;
+  const INITIAL_RENDER=20;
+  const BATCH_SIZE=20;
+  const CATEGORIES={
+    ernaehrung:{label:'Ernährung',color:'#51cf66'},
+    training:{label:'Training',color:'#ffa94d'},
+    regeneration:{label:'Regeneration',color:'#74c0fc'},
+    mindset:{label:'Mindset',color:'#cc5de8'},
+    gesundheit:{label:'Gesundheit',color:'#ff6b6b'},
+    wettkampf:{label:'Wettkampf',color:'#ffd43b'},
+    allgemein:{label:'Allgemein',color:'#868e96'},
+  };
+
+  let articles=[];
+  let fuse=null;
+  let activeCategory=null;
+  let searchQuery='';
+
+  const searchInput=document.getElementById('search');
+  const resultsHeader=document.getElementById('results-header');
+  const resultsContainer=document.getElementById('results');
+  const emptyState=document.getElementById('empty-state');
+  const filterContainer=document.getElementById('filter-chips');
+
+  // Load index
+  try{
+    const res=await fetch('/index.json');
+    if(!res.ok) throw new Error('HTTP '+res.status);
+    articles=await res.json();
+  }catch(err){
+    resultsHeader.textContent='Artikel konnten nicht geladen werden.';
+    console.error('Index laden fehlgeschlagen:',err);
+    return;
+  }
+
+  // Init Fuse.js
+  if(typeof Fuse!=='undefined'){
+    fuse=new Fuse(articles,{
+      keys:[
+        {name:'title',weight:0.30},
+        {name:'slug',weight:0.25},
+        {name:'tags',weight:0.20},
+        {name:'category',weight:0.10},
+        {name:'keywords',weight:0.10},
+        {name:'content',weight:0.05},
+      ],
+      threshold:0.35,
+      ignoreLocation:true,
+      minMatchCharLength:MIN_CHARS,
+      includeScore:true,
+      findAllMatches:true,
+    });
+  }else{
+    console.warn('Fuse.js nicht geladen, Suche deaktiviert');
+  }
+
+  // Render filter chips
+  renderFilterChips();
+  restoreFromUrl();
+
+  // Autofocus on desktop only
+  if(window.innerWidth>768) searchInput.focus();
+
+  // Events
+  searchInput.addEventListener('input',debounce(onSearch,DEBOUNCE_MS));
+  searchInput.addEventListener('keydown',function(e){
+    if(e.key==='Escape'){searchInput.value='';searchQuery='';updateUrl('replace');render();}
+  });
+  window.addEventListener('popstate',restoreFromUrl);
+
+  function onSearch(){
+    searchQuery=searchInput.value.trim();
+    updateUrl('replace');
+    render();
+  }
+
+  function onFilterClick(category){
+    activeCategory=(activeCategory===category)?null:category;
+    updateUrl('push');
+    render();
+    updateChipStates();
+  }
+
+  function render(){
+    let results;
+    if(fuse&&searchQuery.length>=MIN_CHARS){
+      results=fuse.search(searchQuery).map(function(r){return r.item;});
+    }else{
+      results=articles;
+    }
+    if(activeCategory){
+      results=results.filter(function(a){return a.category===activeCategory;});
+    }
+    updateResultsHeader(results.length);
+    if(results.length===0){
+      resultsContainer.innerHTML='';
+      emptyState.hidden=false;
+    }else{
+      emptyState.hidden=true;
+      renderCards(results);
+    }
+  }
+
+  function renderCards(items){
+    // Lazy rendering for large lists
+    const toRender=items.slice(0,INITIAL_RENDER);
+    resultsContainer.innerHTML=toRender.map(function(a,i){return cardHtml(a,i);}).join('');
+
+    if(items.length>INITIAL_RENDER){
+      var sentinel=document.createElement('div');
+      sentinel.className='load-more-sentinel';
+      sentinel.style.height='1px';
+      resultsContainer.appendChild(sentinel);
+
+      var loaded=INITIAL_RENDER;
+      var observer=new IntersectionObserver(function(entries){
+        if(entries[0].isIntersecting){
+          var next=items.slice(loaded,loaded+BATCH_SIZE);
+          sentinel.insertAdjacentHTML('beforebegin',next.map(function(a,i){return cardHtml(a,loaded+i);}).join(''));
+          loaded+=BATCH_SIZE;
+          if(loaded>=items.length){observer.disconnect();sentinel.remove();}
+        }
+      });
+      observer.observe(sentinel);
+    }
+  }
+
+  function cardHtml(article,i){
+    var catColor=getCatColor(article.category);
+    var catLabel=getCatLabel(article.category);
+    return '<a href="'+esc(article.url)+'" class="article-card" role="listitem" style="animation-delay:'+i*0.04+'s">'
+      +'<div class="card-meta">'
+      +'<span class="card-date">'+formatDate(article.date)+'</span>'
+      +'<span class="card-category" style="color:'+catColor+';background:'+catColor+'1f">'+esc(catLabel)+'</span>'
+      +'</div>'
+      +'<div class="card-title">'+esc(article.title)+'</div>'
+      +(article.summary?'<div class="card-summary">'+esc(article.summary)+'</div>':'')
+      +'<div class="card-tags">'+(article.tags||[]).map(function(t){return '<span class="card-tag">'+esc(t)+'</span>';}).join('')+'</div>'
+      +'<span class="card-arrow" aria-hidden="true">\u2192</span>'
+      +'</a>';
+  }
+
+  function updateResultsHeader(count){
+    var catLabel=activeCategory?getCatLabel(activeCategory):null;
+    var text;
+    if(!searchQuery&&!activeCategory){text='Alle Artikel';}
+    else if(!searchQuery&&activeCategory){text=count+' Artikel in '+catLabel;}
+    else if(searchQuery&&!activeCategory){text=count+' Treffer für \u201e'+esc(searchQuery)+'\u201c';}
+    else{text=count+' Treffer für \u201e'+esc(searchQuery)+'\u201c in '+catLabel;}
+    resultsHeader.textContent=text;
+  }
+
+  function renderFilterChips(){
+    var counts={};
+    articles.forEach(function(a){counts[a.category]=(counts[a.category]||0)+1;});
+
+    var html='<button class="filter-chip" role="radio" aria-checked="true" style="--chip-color:var(--accent)" data-cat="">Alle <span class="chip-count">('+articles.length+')</span></button>';
+    Object.keys(CATEGORIES).forEach(function(cat){
+      if(!counts[cat]) return;
+      var c=CATEGORIES[cat];
+      html+='<button class="filter-chip" role="radio" aria-checked="false" style="--chip-color:'+c.color+'" data-cat="'+cat+'">'+c.label+' <span class="chip-count">('+counts[cat]+')</span></button>';
+    });
+    filterContainer.innerHTML=html;
+
+    filterContainer.querySelectorAll('.filter-chip').forEach(function(chip){
+      chip.addEventListener('click',function(){
+        var cat=this.getAttribute('data-cat');
+        onFilterClick(cat||null);
+      });
+    });
+  }
+
+  function updateChipStates(){
+    filterContainer.querySelectorAll('.filter-chip').forEach(function(chip){
+      var cat=chip.getAttribute('data-cat');
+      var isActive=(activeCategory===null&&cat==='')||(activeCategory===cat);
+      chip.setAttribute('aria-checked',isActive?'true':'false');
+    });
+  }
+
+  function updateUrl(mode){
+    var params=new URLSearchParams();
+    if(searchQuery) params.set('q',searchQuery);
+    if(activeCategory) params.set('cat',activeCategory);
+    var url=params.toString()?'?'+params.toString():location.pathname;
+    if(mode==='push') history.pushState(null,'',url);
+    else history.replaceState(null,'',url);
+  }
+
+  function restoreFromUrl(){
+    var params=new URLSearchParams(location.search);
+    searchQuery=params.get('q')||'';
+    activeCategory=params.get('cat')||null;
+    searchInput.value=searchQuery;
+    updateChipStates();
+    render();
+  }
+
+  function debounce(fn,ms){
+    var timer;
+    return function(){
+      clearTimeout(timer);
+      timer=setTimeout(fn,ms);
+    };
+  }
+
+  function esc(str){
+    if(!str) return '';
+    var d=document.createElement('div');
+    d.textContent=str;
+    return d.innerHTML;
+  }
+
+  function formatDate(dateStr){
+    var months=['Jan','Feb','Mär','Apr','Mai','Jun','Jul','Aug','Sep','Okt','Nov','Dez'];
+    var p=dateStr.split('-');
+    var y=parseInt(p[0]),m=parseInt(p[1]),d=parseInt(p[2]);
+    if(!y||!m||!d) return dateStr;
+    return d+'. '+months[m-1]+' '+y;
+  }
+
+  function getCatColor(cat){return(CATEGORIES[cat]||{}).color||'#868e96';}
+  function getCatLabel(cat){return(CATEGORIES[cat]||{}).label||cat;}
+})();
+</script>
+</body>
+</html>

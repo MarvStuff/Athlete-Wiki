@@ -1,0 +1,83 @@
+<!--
+title: Schlafqualität richtig messen
+date: 2026-02-12
+tags: regeneration, schlaf, erholung, hrv, tracking
+category: regeneration
+status: published
+slug: 2026-02-12-schlafqualitaet-messen
+summary: Welche Metriken wirklich zählen und warum du dich nicht auf eine einzelne Zahl verlassen solltest.
+keywords: schlaftracker, tiefschlaf, rem, schlafphasen
+-->
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Schlafqualität richtig messen – Athlete Wiki</title>
+<style>
+@font-face{font-family:'DM Serif Display';font-style:normal;font-weight:400;font-display:swap;src:url('/fonts/dm-serif-display-regular.woff2') format('woff2')}
+@font-face{font-family:'Outfit';font-style:normal;font-weight:300;font-display:swap;src:url('/fonts/outfit-300.woff2') format('woff2')}
+@font-face{font-family:'Outfit';font-style:normal;font-weight:400;font-display:swap;src:url('/fonts/outfit-400.woff2') format('woff2')}
+@font-face{font-family:'Outfit';font-style:normal;font-weight:500;font-display:swap;src:url('/fonts/outfit-500.woff2') format('woff2')}
+@font-face{font-family:'Outfit';font-style:normal;font-weight:600;font-display:swap;src:url('/fonts/outfit-600.woff2') format('woff2')}
+:root{--bg:#0f1923;--card:#162231;--card-border:#1e3044;--accent-blue:#74c0fc;--accent-teal:#38d9a9;--text:#e8edf2;--text-muted:#8899aa;--text-dim:#556677}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--text);font-family:'Outfit',sans-serif;min-height:100vh}
+.container{max-width:1100px;margin:0 auto;padding:50px 30px 80px}
+.header{text-align:center;margin-bottom:60px;position:relative}
+.header::after{content:'';position:absolute;bottom:-30px;left:50%;transform:translateX(-50%);width:80px;height:3px;background:linear-gradient(90deg,var(--accent-blue),var(--accent-teal));border-radius:2px}
+h1{font-family:'DM Serif Display',serif;font-size:clamp(2rem,5vw,3.2rem);font-weight:400;line-height:1.2;background:linear-gradient(135deg,#fff 0%,#c8d6e5 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.header p{font-size:1.05rem;color:var(--text-muted);font-weight:300;max-width:600px;margin:16px auto 0;line-height:1.6}
+.metric-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;margin-top:40px}
+.metric-card{background:var(--card);border:1px solid var(--card-border);border-radius:16px;padding:28px 24px;border-top:3px solid var(--accent-blue)}
+.metric-card h3{font-size:1.1rem;font-weight:600;margin-bottom:8px;color:var(--accent-blue)}
+.metric-card .value{font-size:2rem;font-weight:700;color:var(--text);margin-bottom:8px}
+.metric-card p{font-size:0.88rem;color:var(--text-muted);font-weight:300;line-height:1.6}
+.tip-box{background:linear-gradient(135deg,rgba(116,192,252,0.08),rgba(56,217,169,0.06));border:1px solid rgba(116,192,252,0.2);border-radius:16px;padding:28px 30px;margin-top:40px;display:flex;gap:18px;align-items:flex-start}
+.tip-icon{font-size:1.6rem;flex-shrink:0}
+.tip-box h3{font-size:1rem;font-weight:600;color:var(--accent-blue);margin-bottom:6px}
+.tip-box p{font-size:0.88rem;color:var(--text-muted);line-height:1.6;font-weight:300}
+.summary{text-align:center;margin-top:50px;padding:30px}
+.summary p{color:var(--text-muted);font-size:0.95rem;line-height:1.7;max-width:650px;margin:0 auto;font-weight:300}
+.summary .highlight{color:var(--accent-teal);font-weight:500}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1>Schlafqualität richtig messen</h1>
+    <p>Welche Metriken wirklich zählen – und warum du dich nicht auf eine einzelne Zahl verlassen solltest.</p>
+  </div>
+
+  <div class="metric-grid">
+    <div class="metric-card">
+      <h3>Tiefschlaf</h3>
+      <div class="value">1.5–2h</div>
+      <p>Die wichtigste Phase für körperliche Regeneration. Hier werden Wachstumshormone ausgeschüttet und Muskeln repariert.</p>
+    </div>
+    <div class="metric-card">
+      <h3>REM-Schlaf</h3>
+      <div class="value">1.5–2h</div>
+      <p>Entscheidend für mentale Erholung, Gedächtnisbildung und emotionale Verarbeitung. Besonders in der zweiten Nachthälfte.</p>
+    </div>
+    <div class="metric-card">
+      <h3>Schlafeffizienz</h3>
+      <div class="value">&gt;85%</div>
+      <p>Anteil der Zeit im Bett, die du tatsächlich schläfst. Unter 80% deutet auf Einschlaf- oder Durchschlafprobleme hin.</p>
+    </div>
+  </div>
+
+  <div class="tip-box">
+    <div class="tip-icon" aria-hidden="true">&#128161;</div>
+    <div>
+      <h3>Nicht auf den Score fixieren</h3>
+      <p>Schlaftracker-Scores sind Schätzungen, keine medizinischen Messungen. Wenn du dich ausgeruht fühlst, aber dein Tracker sagt 65 – vertrau deinem Körper. Nutze die Trends über Wochen, nicht einzelne Nächte.</p>
+    </div>
+  </div>
+
+  <div class="summary">
+    <p>Guter Schlaf ist der <span class="highlight">wichtigste Regenerationsfaktor</span> – wichtiger als jedes Supplement. Optimiere zuerst deine Schlafhygiene, bevor du in Gadgets investierst.</p>
+  </div>
+</div>
+</body>
+</html>
