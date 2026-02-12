@@ -1,0 +1,196 @@
+<!--
+title: Nattokinase – Enzym fuer Herz-Kreislauf und Durchblutung
+date: 2026-02-12
+tags: herz-kreislauf, thrombosen, blutdrucksenkung, nervensystem
+category: gesundheit
+status: published
+slug: nattokinase
+summary: Nattokinase ist ein Enzym aus fermentiertem Soja, das die Herz-Kreislauf-Gesundheit unterstuetzt, Thrombosen vorbeugt, den Blutdruck senkt und die Durchblutung verbessert.
+keywords: nattokinase, natto, nattou, fibrinolytisch, blutdruck, thrombose, enzym
+-->
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nattokinase – Athlete Wiki</title>
+<style>
+@font-face{font-family:'DM Serif Display';font-style:normal;font-weight:400;font-display:swap;src:url('/fonts/dm-serif-display-regular.woff2') format('woff2')}
+@font-face{font-family:'Outfit';font-style:normal;font-weight:300;font-display:swap;src:url('/fonts/outfit-300.woff2') format('woff2')}
+@font-face{font-family:'Outfit';font-style:normal;font-weight:400;font-display:swap;src:url('/fonts/outfit-400.woff2') format('woff2')}
+@font-face{font-family:'Outfit';font-style:normal;font-weight:500;font-display:swap;src:url('/fonts/outfit-500.woff2') format('woff2')}
+@font-face{font-family:'Outfit';font-style:normal;font-weight:600;font-display:swap;src:url('/fonts/outfit-600.woff2') format('woff2')}
+@font-face{font-family:'Outfit';font-style:normal;font-weight:700;font-display:swap;src:url('/fonts/outfit-700.woff2') format('woff2')}
+:root{--bg:#0f1923;--card:#162231;--card-border:#1e3044;--accent-orange:#ffa94d;--accent-teal:#38d9a9;--accent-red:#ff6b6b;--accent-green:#51cf66;--accent-blue:#74c0fc;--accent-purple:#cc5de8;--text:#e8edf2;--text-muted:#8899aa;--text-dim:#556677}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--text);font-family:'Outfit',sans-serif;min-height:100vh;overflow-x:hidden}
+.container{max-width:1100px;margin:0 auto;padding:50px 30px 80px}
+.header{text-align:center;margin-bottom:60px;position:relative}
+.header::after{content:'';position:absolute;bottom:-30px;left:50%;transform:translateX(-50%);width:80px;height:3px;background:linear-gradient(90deg,var(--accent-green),var(--accent-teal));border-radius:2px}
+h1{font-family:'DM Serif Display',serif;font-size:clamp(2rem,5vw,3.2rem);font-weight:400;line-height:1.2;background:linear-gradient(135deg,#fff 0%,#c8d6e5 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.header p{font-size:1.05rem;color:var(--text-muted);font-weight:300;max-width:600px;margin:16px auto 0;line-height:1.6}
+.section-label{display:inline-flex;align-items:center;gap:8px;font-size:0.75rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;margin-bottom:14px}
+.section-label .dot{width:8px;height:8px;border-radius:50%}
+.info-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:40px}
+@media(max-width:700px){.info-grid{grid-template-columns:1fr}}
+.info-card{background:rgba(255,255,255,0.02);border:1px solid var(--card-border);border-radius:14px;padding:24px;transition:border-color 0.3s}
+.info-card:hover{border-color:rgba(255,255,255,0.1)}
+.info-card.good{border-left:3px solid var(--accent-green)}
+.info-card.bad{border-left:3px solid var(--accent-red)}
+.info-card.info{border-left:3px solid var(--accent-teal)}
+.info-card.highlight{border-left:3px solid var(--accent-teal)}
+.info-card h3{font-size:1rem;font-weight:600;margin-bottom:8px}
+.info-card.good h3{color:var(--accent-green)}
+.info-card.bad h3{color:var(--accent-red)}
+.info-card.info h3{color:var(--accent-teal)}
+.info-card.highlight h3{color:var(--accent-teal)}
+.info-card p{font-size:0.88rem;color:var(--text-muted);line-height:1.6;font-weight:300}
+.chart-card{background:var(--card);border:1px solid var(--card-border);border-radius:20px;padding:36px 32px 28px;position:relative;overflow:hidden;margin-bottom:40px}
+.chart-card::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.08),transparent)}
+.chart-title{font-family:'DM Serif Display',serif;font-size:1.5rem;margin-bottom:6px}
+.chart-subtitle{color:var(--text-muted);font-size:0.9rem;font-weight:300;margin-bottom:28px;line-height:1.5}
+.dose-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:700px){.dose-grid{grid-template-columns:1fr}}
+.dose-item{display:flex;align-items:flex-start;gap:14px;padding:18px 20px;background:rgba(255,255,255,0.02);border:1px solid var(--card-border);border-radius:12px}
+.dose-item:hover{border-color:rgba(255,255,255,0.1)}
+.dose-badge{font-size:0.82rem;font-weight:600;padding:6px 14px;border-radius:8px;white-space:nowrap;color:var(--accent-green);background:rgba(81,207,102,0.12)}
+.dose-info{flex:1}
+.dose-label{font-weight:500;font-size:0.95rem;margin-bottom:2px}
+.dose-detail{font-size:0.82rem;color:var(--text-muted);font-weight:300;line-height:1.5}
+.synergy-list{list-style:none;display:flex;flex-direction:column;gap:12px}
+.synergy-item{display:flex;justify-content:space-between;align-items:center;padding:16px 20px;background:rgba(255,255,255,0.02);border:1px solid var(--card-border);border-radius:12px}
+.synergy-item:hover{border-color:rgba(255,255,255,0.1)}
+.synergy-name{font-weight:500;font-size:0.95rem;color:var(--text);text-decoration:none}
+a.synergy-name:hover{color:var(--accent-teal)}
+.synergy-detail{font-size:0.82rem;color:var(--text-muted);font-weight:300;margin-top:2px}
+.synergy-badge{font-size:0.82rem;font-weight:600;padding:4px 12px;border-radius:8px;white-space:nowrap;color:var(--accent-teal);background:rgba(56,217,169,0.12)}
+.warning-box{background:linear-gradient(135deg,rgba(255,107,107,0.08),rgba(255,169,77,0.06));border:1px solid rgba(255,107,107,0.2);border-radius:16px;padding:28px 30px;margin-top:40px;display:flex;gap:18px;align-items:flex-start}
+.warning-icon{font-size:1.6rem;flex-shrink:0;margin-top:2px}
+.warning-box h3{font-size:1rem;font-weight:600;color:var(--accent-orange);margin-bottom:6px}
+.warning-box p{font-size:0.88rem;color:var(--text-muted);line-height:1.6;font-weight:300}
+.summary{text-align:center;margin-top:50px;padding:30px}
+.summary p{color:var(--text-muted);font-size:0.95rem;line-height:1.7;max-width:650px;margin:0 auto;font-weight:300}
+.summary .highlight{color:var(--accent-teal);font-weight:500}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1>Nattokinase</h1>
+    <p>Ein fibrinolytisches Enzym aus fermentiertem Soja, das die Herz-Kreislauf-Gesundheit unterstützt. Nattokinase verbessert die Durchblutung, beugt Thrombosen vor und senkt den Blutdruck.</p>
+  </div>
+
+  <div class="section-label">
+    <span class="dot" style="background:var(--accent-teal)"></span>
+    <span style="color:var(--accent-teal)">So wirkt es</span>
+  </div>
+
+  <div class="info-grid">
+    <div class="info-card good">
+      <h3>Thrombolytische Wirkung</h3>
+      <p>Nattokinase kann Fibrin – den Hauptbestandteil von Blutgerinnseln – direkt abbauen. Das Enzym aktiviert zudem körpereigene fibrinolytische Prozesse und unterstützt so die natürliche Auflösung von Blutgerinnseln.</p>
+    </div>
+    <div class="info-card good">
+      <h3>Blutdruck senken</h3>
+      <p>Studien zeigen, dass Nattokinase den systolischen und diastolischen Blutdruck moderat senken kann. Der Mechanismus umfasst die Hemmung des Angiotensin-Converting-Enzyms (ACE) und die Verbesserung der Gefäßelastizität.</p>
+    </div>
+    <div class="info-card good">
+      <h3>Durchblutung verbessern</h3>
+      <p>Durch den Abbau von Fibrin und die Senkung der Blutviskosität verbessert Nattokinase die allgemeine Durchblutung. Das kommt auch dem Gehirn zugute – eine bessere zerebrale Blutzirkulation kann die kognitive Funktion unterstützen.</p>
+    </div>
+    <div class="info-card info">
+      <h3>Nervensystem</h3>
+      <p>Die verbesserte Durchblutung im Gehirn kann neuroprotektive Effekte haben. Erste Studien deuten darauf hin, dass Nattokinase auch amyloide Ablagerungen abbauen könnte, was für die langfristige Gehirngesundheit relevant sein kann.</p>
+    </div>
+  </div>
+
+  <div class="section-label" style="margin-top:50px">
+    <span class="dot" style="background:var(--accent-green)"></span>
+    <span style="color:var(--accent-green)">Dosierung</span>
+  </div>
+
+  <div class="chart-card">
+    <div class="chart-title">Wie viel und wann</div>
+    <div class="chart-subtitle">Nattokinase wird in fibrinolytischen Einheiten (FU) dosiert. Die Aktivität des Enzyms ist entscheidender als das Gewicht in Milligramm.</div>
+    <div class="dose-grid">
+      <div class="dose-item">
+        <span class="dose-badge">2.000–5.000 FU</span>
+        <div class="dose-info">
+          <div class="dose-label">Tägliche Dosis</div>
+          <div class="dose-detail">2.000 FU für die allgemeine Herz-Kreislauf-Unterstützung. Bis zu 5.000 FU in Studien zur Blutdrucksenkung und Thromboseprävention eingesetzt.</div>
+        </div>
+      </div>
+      <div class="dose-item">
+        <span class="dose-badge">Täglich</span>
+        <div class="dose-info">
+          <div class="dose-label">Einnahmefrequenz</div>
+          <div class="dose-detail">Tägliche Einnahme wird empfohlen. Die Dosis kann einmal täglich oder auf zwei Einnahmen aufgeteilt werden.</div>
+        </div>
+      </div>
+      <div class="dose-item">
+        <span class="dose-badge">Nüchtern</span>
+        <div class="dose-info">
+          <div class="dose-label">Zeitpunkt</div>
+          <div class="dose-detail">Idealerweise auf nüchternen Magen einnehmen, da Nahrung die Enzymaktivität beeinflussen kann. Mindestens 30 Minuten vor einer Mahlzeit.</div>
+        </div>
+      </div>
+      <div class="dose-item">
+        <span class="dose-badge">Kapsel</span>
+        <div class="dose-info">
+          <div class="dose-label">Beste Form</div>
+          <div class="dose-detail">Magensaftresistente Kapseln schützen das Enzym vor der Magensäure und verbessern die Bioverfügbarkeit. Auf die FU-Angabe pro Kapsel achten.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-label" style="margin-top:50px">
+    <span class="dot" style="background:var(--accent-teal)"></span>
+    <span style="color:var(--accent-teal)">Synergien</span>
+  </div>
+
+  <div class="chart-card">
+    <div class="chart-title">Kombiniert gut mit</div>
+    <div class="chart-subtitle">Nattokinase entfaltet ihre kardiovaskuläre Wirkung besonders gut in Kombination mit diesen Stoffen.</div>
+    <ul class="synergy-list">
+      <li class="synergy-item">
+        <div><a href="/pages/coenzymq10.html" class="synergy-name">Coenzym Q10</a><div class="synergy-detail">Schützt das Herz auf zellulärer Ebene und unterstützt die Energieversorgung des Herzmuskels – ergänzt die gefäßschützende Wirkung von Nattokinase</div></div>
+        <span class="synergy-badge">Herzschutz</span>
+      </li>
+      <li class="synergy-item">
+        <div><a href="/pages/omega3.html" class="synergy-name">Omega-3</a><div class="synergy-detail">Wirkt ebenfalls entzündungshemmend und verbessert Blutfettwerte. Die Kombination bietet einen umfassenden kardiovaskulären Schutz.</div></div>
+        <span class="synergy-badge">Blutfette</span>
+      </li>
+    </ul>
+  </div>
+
+  <div class="section-label" style="margin-top:50px">
+    <span class="dot" style="background:var(--accent-orange)"></span>
+    <span style="color:var(--accent-orange)">Mögliche Nachteile</span>
+  </div>
+
+  <div class="info-grid">
+    <div class="info-card bad">
+      <h3>Wechselwirkung mit Blutverdünnern</h3>
+      <p>Nattokinase verstärkt die Wirkung von blutverdünnenden Medikamenten wie Warfarin, Heparin oder ASS erheblich. Die Kombination kann das Blutungsrisiko gefährlich erhöhen. Bei Einnahme von Antikoagulanzien ist Nattokinase kontraindiziert.</p>
+    </div>
+    <div class="info-card info">
+      <h3>Vor Operationen absetzen</h3>
+      <p>Aufgrund der blutverdünnenden Wirkung sollte Nattokinase mindestens zwei Wochen vor geplanten Operationen oder zahnärztlichen Eingriffen abgesetzt werden. Ärztliche Rücksprache ist in jedem Fall erforderlich.</p>
+    </div>
+  </div>
+
+  <div class="warning-box">
+    <div class="warning-icon" aria-hidden="true">&#9888;&#65039;</div>
+    <div>
+      <h3>Herkunft und Sicherheit</h3>
+      <p>Nattokinase wird aus Natto gewonnen – einem traditionellen japanischen Lebensmittel aus fermentiertem Soja. Bei empfohlener Dosierung und ohne Einnahme von Blutverdünnern gilt sie als sicher. Die gleichzeitige Einnahme mit Antikoagulanzien oder Thrombozytenaggregationshemmern ist streng kontraindiziert. Vor der Einnahme unbedingt ärztliche Rücksprache halten, besonders bei bestehenden Herz-Kreislauf-Erkrankungen.</p>
+    </div>
+  </div>
+
+  <div class="summary">
+    <p>Nattokinase ist ein <span class="highlight">natürliches Enzym für die Herz-Kreislauf-Gesundheit</span>. Es unterstützt die Durchblutung, beugt Thrombosen vor und senkt den Blutdruck – eine wertvolle Ergänzung für alle, die ihr kardiovaskuläres System gezielt schützen möchten.</p>
+  </div>
+</div>
+</body>
+</html>

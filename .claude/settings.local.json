@@ -9,7 +9,16 @@
       "Bash(dir:*)",
       "Bash(ls -la \"C:\\\\Users\\\\Anwender\\\\Documents\\\\IT\\\\Web-Projekte\\\\Athlete-Wiki\\\\public\"\" && echo \"---PAGES---\" && ls -la \"C:UsersAnwenderDocumentsITWeb-ProjekteAthlete-Wikipublicpages\"\")",
       "Bash(npm test:*)",
-      "Bash(npm run build:*)"
+      "Bash(npm run build:*)",
+      "Bash(npm run validate:*)",
+      "Bash(cut:*)",
+      "Bash(for f in kreatin.html betaalanin.html citrullin.html curcumin.html arginin.html magnesium.html omega3.html vitamind.html zink.html taurin.html melatonin.html vitaminc.html eisen.html)",
+      "Bash(do sed -i 's|href=\"\"/pages/\\\\\\([a-z0-9]*\\\\\\)\"\"|href=\"\"/pages/\\\\1.html\"\"|g' \"$f\")",
+      "Bash(echo:*)",
+      "Bash(done)",
+      "Bash(grep:*)",
+      "Bash(wc:*)",
+      "Bash(npx serve:*)"
     ]
   }
 }

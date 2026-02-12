@@ -1,0 +1,227 @@
+<!--
+title: Omega-3 – Essentielle Fettsäuren für Herz, Gelenke und Regeneration
+date: 2026-02-12
+tags: gesundheit, omega-3, supplement, epa, dha, fischoel, herzgesundheit, entzuendungshemmend
+category: gesundheit
+status: published
+slug: omega3
+summary: Omega-3-Fettsäuren (EPA und DHA) sind essentiell für Herzgesundheit, Gehirnfunktion und Entzündungsregulation. Die meisten Menschen nehmen zu wenig davon zu sich.
+keywords: omega-3, omega 3, epa, dha, fischoel, algenoel, entzuendungshemmend, herzgesundheit
+-->
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Omega-3 – Athlete Wiki</title>
+<style>
+@font-face{font-family:'DM Serif Display';font-style:normal;font-weight:400;font-display:swap;src:url('/fonts/dm-serif-display-regular.woff2') format('woff2')}
+@font-face{font-family:'Outfit';font-style:normal;font-weight:300;font-display:swap;src:url('/fonts/outfit-300.woff2') format('woff2')}
+@font-face{font-family:'Outfit';font-style:normal;font-weight:400;font-display:swap;src:url('/fonts/outfit-400.woff2') format('woff2')}
+@font-face{font-family:'Outfit';font-style:normal;font-weight:500;font-display:swap;src:url('/fonts/outfit-500.woff2') format('woff2')}
+@font-face{font-family:'Outfit';font-style:normal;font-weight:600;font-display:swap;src:url('/fonts/outfit-600.woff2') format('woff2')}
+@font-face{font-family:'Outfit';font-style:normal;font-weight:700;font-display:swap;src:url('/fonts/outfit-700.woff2') format('woff2')}
+:root{--bg:#0f1923;--card:#162231;--card-border:#1e3044;--accent-orange:#ffa94d;--accent-teal:#38d9a9;--accent-red:#ff6b6b;--accent-green:#51cf66;--accent-blue:#74c0fc;--accent-purple:#cc5de8;--text:#e8edf2;--text-muted:#8899aa;--text-dim:#556677}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--text);font-family:'Outfit',sans-serif;min-height:100vh;overflow-x:hidden}
+.container{max-width:1100px;margin:0 auto;padding:50px 30px 80px}
+.header{text-align:center;margin-bottom:60px;position:relative}
+.header::after{content:'';position:absolute;bottom:-30px;left:50%;transform:translateX(-50%);width:80px;height:3px;background:linear-gradient(90deg,var(--accent-green),var(--accent-teal));border-radius:2px}
+h1{font-family:'DM Serif Display',serif;font-size:clamp(2rem,5vw,3.2rem);font-weight:400;line-height:1.2;background:linear-gradient(135deg,#fff 0%,#c8d6e5 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.header p{font-size:1.05rem;color:var(--text-muted);font-weight:300;max-width:600px;margin:16px auto 0;line-height:1.6}
+.section-label{display:inline-flex;align-items:center;gap:8px;font-size:0.75rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;margin-bottom:14px}
+.section-label .dot{width:8px;height:8px;border-radius:50%}
+.info-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:40px}
+@media(max-width:700px){.info-grid{grid-template-columns:1fr}}
+.info-card{background:rgba(255,255,255,0.02);border:1px solid var(--card-border);border-radius:14px;padding:24px;transition:border-color 0.3s}
+.info-card:hover{border-color:rgba(255,255,255,0.1)}
+.info-card.good{border-left:3px solid var(--accent-green)}
+.info-card.bad{border-left:3px solid var(--accent-red)}
+.info-card.info{border-left:3px solid var(--accent-teal)}
+.info-card h3{font-size:1rem;font-weight:600;margin-bottom:8px}
+.info-card.good h3{color:var(--accent-green)}
+.info-card.bad h3{color:var(--accent-red)}
+.info-card.info h3{color:var(--accent-teal)}
+.info-card p{font-size:0.88rem;color:var(--text-muted);line-height:1.6;font-weight:300}
+.chart-card{background:var(--card);border:1px solid var(--card-border);border-radius:20px;padding:36px 32px 28px;position:relative;overflow:hidden;margin-bottom:40px}
+.chart-card::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.08),transparent)}
+.chart-title{font-family:'DM Serif Display',serif;font-size:1.5rem;margin-bottom:6px}
+.chart-subtitle{color:var(--text-muted);font-size:0.9rem;font-weight:300;margin-bottom:28px;line-height:1.5}
+.compare-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px}
+@media(max-width:700px){.compare-grid{grid-template-columns:1fr}}
+.compare-card{padding:24px;border-radius:14px;border:1px solid var(--card-border);background:rgba(255,255,255,0.02)}
+.compare-card h4{font-size:0.95rem;font-weight:600;margin-bottom:8px}
+.compare-card p{font-size:0.85rem;color:var(--text-muted);line-height:1.6;font-weight:300}
+.compare-card.epa h4{color:var(--accent-green)}
+.compare-card.dha h4{color:var(--accent-blue)}
+.compare-card.ala h4{color:var(--accent-orange)}
+.dose-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:700px){.dose-grid{grid-template-columns:1fr}}
+.dose-item{display:flex;align-items:flex-start;gap:14px;padding:18px 20px;background:rgba(255,255,255,0.02);border:1px solid var(--card-border);border-radius:12px}
+.dose-item:hover{border-color:rgba(255,255,255,0.1)}
+.dose-badge{font-size:0.82rem;font-weight:600;padding:6px 14px;border-radius:8px;white-space:nowrap;color:var(--accent-green);background:rgba(81,207,102,0.12)}
+.dose-badge.blue{color:var(--accent-blue);background:rgba(116,192,252,0.12)}
+.dose-info{flex:1}
+.dose-label{font-weight:500;font-size:0.95rem;margin-bottom:2px}
+.dose-detail{font-size:0.82rem;color:var(--text-muted);font-weight:300;line-height:1.5}
+.synergy-list{list-style:none;display:flex;flex-direction:column;gap:12px}
+.synergy-item{display:flex;justify-content:space-between;align-items:center;padding:16px 20px;background:rgba(255,255,255,0.02);border:1px solid var(--card-border);border-radius:12px}
+.synergy-item:hover{border-color:rgba(255,255,255,0.1)}
+.synergy-name{font-weight:500;font-size:0.95rem;color:var(--text);text-decoration:none}
+a.synergy-name:hover{color:var(--accent-teal)}
+.synergy-detail{font-size:0.82rem;color:var(--text-muted);font-weight:300;margin-top:2px}
+.synergy-badge{font-size:0.82rem;font-weight:600;padding:4px 12px;border-radius:8px;white-space:nowrap;color:var(--accent-teal);background:rgba(56,217,169,0.12)}
+.warning-box{background:linear-gradient(135deg,rgba(56,217,169,0.08),rgba(56,217,169,0.04));border:1px solid rgba(56,217,169,0.2);border-radius:16px;padding:28px 30px;margin-top:40px;display:flex;gap:18px;align-items:flex-start}
+.warning-icon{font-size:1.6rem;flex-shrink:0;margin-top:2px}
+.warning-box h3{font-size:1rem;font-weight:600;color:var(--accent-teal);margin-bottom:6px}
+.warning-box p{font-size:0.88rem;color:var(--text-muted);line-height:1.6;font-weight:300}
+.summary{text-align:center;margin-top:50px;padding:30px}
+.summary p{color:var(--text-muted);font-size:0.95rem;line-height:1.7;max-width:650px;margin:0 auto;font-weight:300}
+.summary .highlight{color:var(--accent-teal);font-weight:500}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1>Omega-3</h1>
+    <p>Essentielle Fettsäuren, die der Körper nicht selbst herstellen kann. EPA und DHA unterstützen Herzgesundheit, Gehirnfunktion, Gelenkgesundheit und regulieren Entzündungsprozesse im gesamten Körper.</p>
+  </div>
+
+  <div class="section-label">
+    <span class="dot" style="background:var(--accent-teal)"></span>
+    <span style="color:var(--accent-teal)">So wirkt es</span>
+  </div>
+
+  <div class="info-grid">
+    <div class="info-card good">
+      <h3>Entzündungsregulation</h3>
+      <p>Omega-3-Fettsäuren, besonders EPA, regulieren Entzündungsprozesse im Körper. Sie wirken als Gegenspieler zu den entzündungsfördernden Omega-6-Fettsäuren. Ein gutes Omega-3/Omega-6-Verhältnis reduziert chronische, unterschwellige Entzündungen.</p>
+    </div>
+    <div class="info-card good">
+      <h3>Herzgesundheit</h3>
+      <p>Omega-3 reguliert Triglyceridwerte und Blutdruck, unterstützt die Herzfunktion und reduziert das Risiko kardiovaskulärer Erkrankungen. Die Evidenz für die herzschützende Wirkung ist eine der stärksten unter allen Supplementen.</p>
+    </div>
+    <div class="info-card good">
+      <h3>Gehirnfunktion</h3>
+      <p>DHA ist ein Hauptbestandteil der Gehirnzellmembranen. Ausreichend DHA unterstützt kognitive Funktionen, Konzentration und Stimmung. Besonders wichtig in Phasen hoher mentaler Belastung.</p>
+    </div>
+    <div class="info-card info">
+      <h3>Für Sportler relevant</h3>
+      <p>Omega-3 unterstützt die Regeneration nach intensivem Training, kann Muskelkater reduzieren und schützt die Gelenke langfristig. Die entzündungsregulierende Wirkung ist besonders bei hohem Trainingsvolumen wertvoll.</p>
+    </div>
+  </div>
+
+  <div class="section-label" style="margin-top:50px">
+    <span class="dot" style="background:var(--accent-green)"></span>
+    <span style="color:var(--accent-green)">EPA vs. DHA vs. ALA</span>
+  </div>
+
+  <div class="chart-card">
+    <div class="chart-title">Drei Formen – unterschiedliche Aufgaben</div>
+    <div class="chart-subtitle">Nicht alle Omega-3-Fettsäuren sind gleich. EPA und DHA sind die wirksamen Formen – ALA muss erst umgewandelt werden.</div>
+    <div class="compare-grid">
+      <div class="compare-card epa">
+        <h4>EPA</h4>
+        <p>Eicosapentaensäure. Der Entzündungsregulator. Besonders wirksam gegen chronische Entzündungen, wichtig für Herz-Kreislauf-Gesundheit und Stimmung. Primär in fettem Fisch und Algenöl.</p>
+      </div>
+      <div class="compare-card dha">
+        <h4>DHA</h4>
+        <p>Docosahexaensäure. Das Gehirn-Omega-3. Hauptbestandteil der Gehirnzellmembranen und der Netzhaut. Essentiell für kognitive Funktion und Sehkraft. Ebenfalls in Fisch und Algen.</p>
+      </div>
+      <div class="compare-card ala">
+        <h4>ALA</h4>
+        <p>Alpha-Linolensäure. Pflanzliches Omega-3 aus Leinsamen, Walnüssen, Chiasamen. Muss erst in EPA/DHA umgewandelt werden – die Umwandlungsrate liegt nur bei ca. 5-10 %. Kein Ersatz für EPA/DHA.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-label" style="margin-top:50px">
+    <span class="dot" style="background:var(--accent-green)"></span>
+    <span style="color:var(--accent-green)">Dosierung</span>
+  </div>
+
+  <div class="chart-card">
+    <div class="chart-title">Wie viel EPA und DHA</div>
+    <div class="chart-subtitle">Die Dosierung bezieht sich auf die Summe von EPA + DHA – nicht auf die Gesamtmenge Fischöl. Achte auf das Etikett.</div>
+    <div class="dose-grid">
+      <div class="dose-item">
+        <span class="dose-badge">500-5.000 mg</span>
+        <div class="dose-info">
+          <div class="dose-label">EPA + DHA pro Tag</div>
+          <div class="dose-detail">500 mg als Basis, 2.000-3.000 mg bei hoher Trainingsbelastung oder Entzündungsproblematik. 5.000 mg als therapeutische Obergrenze.</div>
+        </div>
+      </div>
+      <div class="dose-item">
+        <span class="dose-badge">Mahlzeit</span>
+        <div class="dose-info">
+          <div class="dose-label">Mit Fett einnehmen</div>
+          <div class="dose-detail">Omega-3 ist fettlöslich. Einnahme mit einer fetthaltigen Mahlzeit verbessert die Aufnahme deutlich. Gleichzeitig reduziert es das typische Fischöl-Aufstoßen.</div>
+        </div>
+      </div>
+      <div class="dose-item">
+        <span class="dose-badge blue">Fischöl</span>
+        <div class="dose-info">
+          <div class="dose-label">Klassische Quelle</div>
+          <div class="dose-detail">Achte auf den tatsächlichen EPA/DHA-Gehalt pro Kapsel. Viele Produkte enthalten nur 30 % EPA+DHA – der Rest ist anderes Fett. Hochkonzentrate mit 60-80 % sind effizienter.</div>
+        </div>
+      </div>
+      <div class="dose-item">
+        <span class="dose-badge blue">Algenöl</span>
+        <div class="dose-info">
+          <div class="dose-label">Vegane Alternative</div>
+          <div class="dose-detail">Algenöl liefert EPA und DHA direkt aus der Primärquelle (Algen sind die eigentlichen Omega-3-Produzenten, nicht der Fisch). Gleichwertig in der Wirkung.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-label" style="margin-top:50px">
+    <span class="dot" style="background:var(--accent-teal)"></span>
+    <span style="color:var(--accent-teal)">Synergien</span>
+  </div>
+
+  <div class="chart-card">
+    <div class="chart-title">Kombiniert gut mit</div>
+    <div class="chart-subtitle">Omega-3 ergänzt sich besonders gut mit anderen fettlöslichen Nährstoffen und Entzündungshemmern.</div>
+    <ul class="synergy-list">
+      <li class="synergy-item">
+        <div><a href="/pages/vitamind.html" class="synergy-name">Vitamin D</a><div class="synergy-detail">Beide fettlöslich, zusammen mit einer Mahlzeit einnehmen. Omega-3 und Vitamin D unterstützen gemeinsam Immunfunktion und Knochengesundheit.</div></div>
+        <span class="synergy-badge">Immunsystem</span>
+      </li>
+      <li class="synergy-item">
+        <div><a href="/pages/curcumin.html" class="synergy-name">Curcumin</a><div class="synergy-detail">Beide wirken entzündungshemmend über unterschiedliche Mechanismen. Zusammen ein starkes Anti-Entzündungs-Duo für Gelenke und Regeneration.</div></div>
+        <span class="synergy-badge">Entzündung</span>
+      </li>
+    </ul>
+  </div>
+
+  <div class="section-label" style="margin-top:50px">
+    <span class="dot" style="background:var(--accent-orange)"></span>
+    <span style="color:var(--accent-orange)">Mögliche Nachteile</span>
+  </div>
+
+  <div class="info-grid">
+    <div class="info-card bad">
+      <h3>Magen-Darm bei hohen Dosen</h3>
+      <p>Hohe Dosen Fischöl können Aufstoßen, Sodbrennen oder weichen Stuhl verursachen. Einnahme mit einer Mahlzeit und hochkonzentrierte Produkte minimieren dieses Problem deutlich.</p>
+    </div>
+    <div class="info-card info">
+      <h3>ALA ist kein Ersatz</h3>
+      <p>Pflanzliches ALA (Leinsamen, Walnüsse) wird nur zu 5-10 % in EPA/DHA umgewandelt. Für die volle Wirkung brauchst du eine direkte EPA/DHA-Quelle – entweder Fischöl oder Algenöl.</p>
+    </div>
+  </div>
+
+  <div class="warning-box">
+    <div class="warning-icon" aria-hidden="true">&#128161;</div>
+    <div>
+      <h3>Qualität zählt</h3>
+      <p>Achte auf gereinigtes, schadstoffarmes Fischöl (Triglyceridform ist besser als Ethylesterform). Gute Produkte sind auf Schwermetalle, PCBs und Oxidation getestet. Ranziges Fischöl ist nicht nur unangenehm, sondern kann auch schädlich sein. Im Kühlschrank aufbewahren.</p>
+    </div>
+  </div>
+
+  <div class="summary">
+    <p>Omega-3 ist eines der <span class="highlight">wichtigsten Basis-Supplemente überhaupt</span>. 2.000-3.000 mg EPA+DHA pro Tag mit einer Mahlzeit. Unterstützt Herz, Gehirn, Gelenke und reguliert Entzündungen – essentiell für jeden Sportler.</p>
+  </div>
+</div>
+</body>
+</html>

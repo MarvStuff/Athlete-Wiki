@@ -115,7 +115,6 @@ Feste Kategorien mit zugeordneten Farben:
 | ernährung | Grün | #51cf66 |
 | training | Orange | #ffa94d |
 | regeneration | Blau | #74c0fc |
-| mindset | Lila | #cc5de8 |
 | gesundheit | Rot | #ff6b6b |
 | wettkampf | Gold | #ffd43b |
 | allgemein | Grau | #868e96 |

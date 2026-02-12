@@ -306,7 +306,6 @@ Fuer die Startseite wird ein `<link rel="preload">` fuer die wichtigsten Fonts g
   --cat-ernaehrung: #51cf66;
   --cat-training: #ffa94d;
   --cat-regeneration: #74c0fc;
-  --cat-mindset: #cc5de8;
   --cat-gesundheit: #ff6b6b;
   --cat-wettkampf: #ffd43b;
   --cat-allgemein: #868e96;
@@ -726,7 +725,6 @@ Die gesamte Startseiten-Logik in einer einzigen Datei (inline im Template oder a
     ernaehrung:    { label: 'Ernährung',    color: '#51cf66' },
     training:      { label: 'Training',     color: '#ffa94d' },
     regeneration:  { label: 'Regeneration', color: '#74c0fc' },
-    mindset:       { label: 'Mindset',      color: '#cc5de8' },
     gesundheit:    { label: 'Gesundheit',   color: '#ff6b6b' },
     wettkampf:     { label: 'Wettkampf',    color: '#ffd43b' },
     allgemein:     { label: 'Allgemein',    color: '#868e96' },

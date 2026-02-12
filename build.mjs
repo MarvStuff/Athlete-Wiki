@@ -11,13 +11,12 @@ const TEMPLATES_DIR = 'templates';
 const STATIC_DIR = 'static';
 const OUTPUT_DIR = 'public';
 const MAX_FILE_SIZE = 2 * 1024 * 1024; // 2 MB
-const MAX_CONTENT_LENGTH = 20_000;
+const MAX_CONTENT_LENGTH = 500;
 
 const KNOWN_CATEGORIES = {
   ernaehrung:    { label: 'Ernährung',    color: '#51cf66' },
   training:      { label: 'Training',     color: '#ffa94d' },
   regeneration:  { label: 'Regeneration', color: '#74c0fc' },
-  mindset:       { label: 'Mindset',      color: '#cc5de8' },
   gesundheit:    { label: 'Gesundheit',   color: '#ff6b6b' },
   wettkampf:     { label: 'Wettkampf',    color: '#ffd43b' },
   allgemein:     { label: 'Allgemein',    color: '#868e96' },
@@ -221,6 +220,7 @@ function buildNavbarHtml() {
   return `<nav style="max-width:1100px;margin:0 auto;padding:16px 30px;display:flex;justify-content:space-between;align-items:center;font-family:'Outfit',sans-serif;font-size:0.85rem">
 <a href="/" style="color:#8899aa;text-decoration:none;font-weight:400" aria-label="Zurück zur Übersicht">← Übersicht</a>
 <div style="display:flex;gap:12px;align-items:center">
+<a href="/uebermich.html" style="color:#8899aa;text-decoration:none;font-size:0.78rem;font-weight:400">Über mich</a>
 <a href="/impressum.html" style="color:#556677;text-decoration:none;font-size:0.72rem">Impressum</a>
 <a href="/datenschutz.html" style="color:#556677;text-decoration:none;font-size:0.72rem">Datenschutz</a>
 <button onclick="navigator.clipboard.writeText(location.href).then(()=>{this.textContent='Kopiert!';setTimeout(()=>this.textContent='Link kopieren',2000)})" style="padding:8px 16px;border:1px solid #1e2d3d;border-radius:10px;background:transparent;color:#8899aa;font-family:'Outfit',sans-serif;font-size:0.82rem;cursor:pointer" aria-label="Link dieser Seite kopieren">Link kopieren</button>
@@ -461,7 +461,7 @@ async function build() {
   await writeFile(path.join(OUTPUT_DIR, 'index.html'), startseite);
 
   // 8. Copy templates (404, Impressum, Datenschutz)
-  for (const tpl of ['404.html', 'impressum.html', 'datenschutz.html']) {
+  for (const tpl of ['404.html', 'impressum.html', 'datenschutz.html', 'uebermich.html']) {
     let content = await readFile(path.join(TEMPLATES_DIR, tpl), 'utf-8');
     content = content.replace(/\{\{siteUrl\}\}/g, config.siteUrl);
     content = content.replace(/\{\{siteName\}\}/g, config.siteName);

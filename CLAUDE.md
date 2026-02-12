@@ -17,6 +17,9 @@ athlete-wiki/
 ├── .editorconfig        Editor-Einstellungen
 ├── .gitignore           public/, node_modules/
 ├── docs/                Konzeptdokumente (Referenz, nicht Teil des Builds)
+├── governance/          Verbindliche Richtlinien und Guidelines
+│   └── guidelines/      Artikel-spezifische Guidelines (IMMER beachten!)
+├── wissen/              Wissensdatenbanken (CSV-Dateien als primaere Datenquellen)
 ├── TASKS.md             Detaillierte Aufgabenbeschreibung
 └── public/              GENERIERT durch Build (nicht committen!)
 ```
@@ -102,7 +105,6 @@ Optional: slug, summary, keywords
 | ernaehrung | #51cf66 |
 | training | #ffa94d |
 | regeneration | #74c0fc |
-| mindset | #cc5de8 |
 | gesundheit | #ff6b6b |
 | wettkampf | #ffd43b |
 | allgemein | #868e96 |
@@ -250,6 +252,14 @@ Build generiert automatisch:
 - **Phase 1 (Produktions-MVP):** Build-Script, Startseite (komplett mit A11y, SEO, Error Handling, URL-State), 404 (mit Suche), Impressum, Datenschutz, Tests, CI/CD
 - **Phase 2 (Polishing):** PWA + Service Worker, Analytics, Watch-Mode, Validate-Command, Lazy Rendering, Font-Subsetting
 - **Phase 3 (Erweiterung):** Redirects, Dark/Light Toggle, Lesezeichen, Kategorie-Seiten, RSS, MiniSearch, Error-Reporting
+
+## Governance und Guidelines
+
+Der Ordner `governance/guidelines/` enthaelt verbindliche Richtlinien, die bei JEDER Arbeit am Projekt beachtet werden MUESSEN:
+
+- `governance/guidelines/supplement-artikel.md` – **PFLICHT-LEKTUERE** bei Erstellung/Bearbeitung von Supplement- und Mikronaehrstoff-Artikeln. Definiert Datenquelle (CSV), Artikel-Struktur, Synergien-Verlinkung, Tags-System und Qualitaetspruefung.
+
+**Wichtig:** Die `wissen/Supplement_DB V1.2.csv` ist die primaere Datenquelle fuer alle Supplement-Artikel. Alle Angaben zu Wirkung, Dosierung, Synergien und Nebenwirkungen MUESSEN mit dieser CSV abgeglichen werden.
 
 ## Referenz-Dokumente
 

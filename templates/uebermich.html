@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Über mich – Athlete Wiki</title>
+<meta name="description" content="Individuelles Online-Coaching für Ernährung, Training und Körperkomposition. Wissenschaftlich fundiert, persönlich betreut.">
+<link rel="canonical" href="{{siteUrl}}/uebermich.html">
+<meta property="og:title" content="Über mich – {{siteName}}">
+<meta property="og:description" content="Individuelles Online-Coaching für Ernährung, Training und Körperkomposition.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{siteUrl}}/uebermich.html">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" href="/icon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="/icon-192.png">
+<link rel="preload" href="/fonts/outfit-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/dm-serif-display-regular.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:'DM Serif Display';font-style:normal;font-weight:400;font-display:swap;src:url('/fonts/dm-serif-display-regular.woff2') format('woff2')}
+@font-face{font-family:'Outfit';font-style:normal;font-weight:300;font-display:swap;src:url('/fonts/outfit-300.woff2') format('woff2')}
+@font-face{font-family:'Outfit';font-style:normal;font-weight:400;font-display:swap;src:url('/fonts/outfit-400.woff2') format('woff2')}
+@font-face{font-family:'Outfit';font-style:normal;font-weight:500;font-display:swap;src:url('/fonts/outfit-500.woff2') format('woff2')}
+@font-face{font-family:'Outfit';font-style:normal;font-weight:600;font-display:swap;src:url('/fonts/outfit-600.woff2') format('woff2')}
+@font-face{font-family:'Outfit';font-style:normal;font-weight:700;font-display:swap;src:url('/fonts/outfit-700.woff2') format('woff2')}
+
+:root{
+  --bg:#0f1923;
+  --card:#162231;
+  --card-border:#1e3044;
+  --accent-teal:#38d9a9;
+  --accent-green:#51cf66;
+  --text:#e8edf2;
+  --text-muted:#8899aa;
+  --text-dim:#556677;
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--text);font-family:'Outfit',sans-serif;min-height:100vh;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:0.01ms !important;transition-duration:0.01ms !important}
+}
+
+.container{max-width:1100px;margin:0 auto;padding:50px 30px 80px}
+
+/* ─── Hero ─── */
+.header{text-align:center;margin-bottom:70px;position:relative}
+.header::after{content:'';position:absolute;bottom:-35px;left:50%;transform:translateX(-50%);width:80px;height:3px;background:linear-gradient(90deg,var(--accent-green),var(--accent-teal));border-radius:2px}
+h1{font-family:'DM Serif Display',serif;font-size:clamp(2rem,5vw,3.2rem);font-weight:400;line-height:1.2;background:linear-gradient(135deg,#fff 0%,#c8d6e5 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.header .claim{font-size:clamp(1rem,2.2vw,1.15rem);color:var(--text-muted);font-weight:300;max-width:600px;margin:16px auto 0;line-height:1.6}
+.header .brand{font-size:0.75rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--text-dim);margin-top:20px}
+
+/* ─── Section Labels ─── */
+.section-label{display:inline-flex;align-items:center;gap:8px;font-size:0.75rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;margin-bottom:14px}
+.section-label .dot{width:8px;height:8px;border-radius:50%}
+
+/* ─── Info Grid ─── */
+.info-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:50px}
+@media(max-width:700px){.info-grid{grid-template-columns:1fr}}
+.info-card{background:rgba(255,255,255,0.02);border:1px solid var(--card-border);border-radius:14px;padding:24px;transition:border-color 0.3s}
+.info-card:hover{border-color:rgba(255,255,255,0.1)}
+.info-card h3{font-size:1rem;font-weight:600;margin-bottom:8px}
+.info-card p{font-size:0.88rem;color:var(--text-muted);line-height:1.7;font-weight:300}
+
+/* ─── Cards (consistent teal accent like article pages) ─── */
+.info-card.accent{border-left:3px solid var(--accent-teal)}
+.info-card.accent h3{color:var(--accent-teal)}
+.info-card.accent-alt{border-left:3px solid var(--accent-green)}
+.info-card.accent-alt h3{color:var(--accent-green)}
+
+/* ─── Process Chart ─── */
+.chart-card{background:var(--card);border:1px solid var(--card-border);border-radius:20px;padding:36px 32px 28px;position:relative;overflow:hidden;margin-bottom:50px}
+.chart-card::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.08),transparent)}
+.chart-title{font-family:'DM Serif Display',serif;font-size:1.5rem;margin-bottom:6px}
+.chart-subtitle{color:var(--text-muted);font-size:0.9rem;font-weight:300;margin-bottom:28px;line-height:1.5}
+
+.process-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:700px){.process-grid{grid-template-columns:1fr}}
+.process-item{display:flex;align-items:flex-start;gap:14px;padding:18px 20px;background:rgba(255,255,255,0.02);border:1px solid var(--card-border);border-radius:12px;transition:border-color 0.3s}
+.process-item:hover{border-color:rgba(255,255,255,0.1)}
+.process-badge{font-size:0.82rem;font-weight:600;padding:6px 14px;border-radius:8px;white-space:nowrap;color:var(--accent-teal);background:rgba(56,217,169,0.12);flex-shrink:0}
+.process-info{flex:1}
+.process-label{font-weight:500;font-size:0.95rem;margin-bottom:2px}
+.process-detail{font-size:0.82rem;color:var(--text-muted);font-weight:300;line-height:1.5}
+
+/* ─── Testimonials ─── */
+.testimonials{display:flex;flex-direction:column;gap:20px;margin-bottom:50px}
+.testimonial{background:rgba(255,255,255,0.02);border:1px solid var(--card-border);border-radius:14px;padding:28px 28px 24px;position:relative}
+.testimonial:hover{border-color:rgba(255,255,255,0.1)}
+.testimonial-quote{font-size:0.95rem;color:var(--text);font-weight:300;line-height:1.7;font-style:italic}
+.testimonial-quote::before{content:'\201E';font-size:2.5rem;color:var(--accent-teal);opacity:0.4;position:absolute;top:12px;left:20px;font-family:'DM Serif Display',serif;line-height:1}
+.testimonial-author{font-size:0.8rem;color:var(--text-dim);font-weight:500;margin-top:14px;letter-spacing:0.5px}
+
+/* ─── Summary / CTA ─── */
+.summary{text-align:center;margin-top:10px;padding:30px}
+.summary p{color:var(--text-muted);font-size:0.95rem;line-height:1.8;max-width:650px;margin:0 auto;font-weight:300}
+.summary .highlight{color:var(--accent-teal);font-weight:500}
+.contact-link{display:inline-block;margin-top:24px;padding:14px 32px;border:1px solid var(--accent-teal);border-radius:12px;color:var(--accent-teal);font-family:'Outfit',sans-serif;font-size:0.92rem;font-weight:500;text-decoration:none;transition:background 0.3s,color 0.3s}
+.contact-link:hover{background:var(--accent-teal);color:var(--bg)}
+
+/* ─── Footer ─── */
+.footer{margin-top:48px;padding-top:24px;border-top:1px solid var(--card-border);display:flex;gap:16px;flex-wrap:wrap}
+.footer a{color:var(--text-dim);font-size:0.75rem;text-decoration:none;transition:color 0.2s}
+.footer a:hover{color:var(--text-muted)}
+
+/* ─── Back Link ─── */
+.back-link{display:inline-block;margin-bottom:32px;color:var(--text-muted);font-size:0.9rem;text-decoration:none;transition:color 0.2s}
+.back-link:hover{color:var(--accent-teal)}
+
+@media(max-width:480px){
+  .container{padding:32px 16px 60px}
+  .header{margin-bottom:50px}
+  .testimonial{padding:22px 20px 18px}
+  .testimonial-quote::before{top:8px;left:14px;font-size:2rem}
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <a href="/" class="back-link" aria-label="Zurück zur Startseite">&larr; Übersicht</a>
+
+  <!-- ─── Hero ─── -->
+  <header class="header">
+    <h1>Über mich</h1>
+    <p class="claim">Individuelles Coaching. Wissenschaftlich fundiert. Persönlich betreut.</p>
+    <p class="brand">MST-Coaching &middot; Marvin Stellmacher</p>
+  </header>
+
+  <!-- ─── Philosophie ─── -->
+  <div class="section-label">
+    <span class="dot" style="background:var(--accent-teal)"></span>
+    <span style="color:var(--accent-teal)">Meine Philosophie</span>
+  </div>
+
+  <div class="info-grid">
+    
+    <div class="info-card accent-alt">
+      <h3>Vertraue dem Prozess</h3>
+      <p>Körperliche Veränderung passiert nicht über Nacht. Es geht darum, die richtigen Routinen aufzubauen und sie über Wochen und Monate durchzuziehen. Fluktuation führt zu fluktuierenden Ergebnissen – Konsistenz schlägt Perfektion.</p>
+    </div>
+    <div class="info-card accent">
+      <h3>80% ist Kopfsache</h3>
+      <p>Ob Diät oder Aufbauphase – der mentale Aspekt ist entscheidend. Ich helfe dir nicht nur mit Zahlen und Plänen, sondern auch dabei, die richtige Einstellung zu entwickeln und in schwierigen Momenten dranzubleiben.</p>
+    </div>
+    <div class="info-card accent-alt">
+      <h3>Du stehst im Mittelpunkt</h3>
+      <p>Mir ist wichtig, dass du zufrieden bist und alles vollständig auf dich abgestimmt ist. Ich richte meine Arbeitszeiten nach dir – es dreht sich darum, dass du weiterkommst. Jeder Plan, jede Anpassung orientiert sich an deiner Realität.</p>
+    </div>
+    <div class="info-card accent">
+      <h3>Nachhaltig statt extrem</h3>
+      <p>Kein Crash-Diät-Wahnsinn, keine leeren Versprechen. Ich setze auf Ansätze, die du langfristig durchhalten kannst. Ein Training, das du gemacht hast und das nicht perfekt war, ist immer besser als ein Training, das du gar nicht machst.</p>
+    </div>
+  </div>
+
+  <!-- ─── Was mich auszeichnet ─── -->
+  <div class="section-label" style="margin-top:10px">
+    <span class="dot" style="background:var(--accent-green)"></span>
+    <span style="color:var(--accent-green)">Was mich auszeichnet</span>
+  </div>
+
+  <div class="info-grid">
+    <div class="info-card accent-alt">
+      <h3>100% individuell</h3>
+      <p>Keine Templates, keine Standardpläne. Jeder Ernährungs- und Trainingsplan wird von Grund auf für dich erstellt – angepasst an deine Ziele, dein Equipment, deinen Zeitplan und dein Budget.</p>
+    </div>
+    <div class="info-card accent">
+      <h3>Wissenschaft trifft Praxis</h3>
+      <p>Ich erkläre dir das Warum hinter jeder Entscheidung – von Insulin-Mechanismen bis zur optimalen Mahlzeitenverteilung. Komplexe Wissenschaft, übersetzt in einfache, umsetzbare Schritte.</p>
+    </div>
+    <div class="info-card accent-alt">
+      <h3>Ganzheitlicher Ansatz</h3>
+      <p>Ernährung, Training, Schlaf, Stress, Supplemente, Verdauung – ich betrachte das Gesamtbild. Über wöchentliche Check-ins tracken wir alle relevanten Parameter und passen den Plan kontinuierlich an.</p>
+    </div>
+    <div class="info-card accent">
+      <h3>Immer erreichbar</h3>
+      <p>Fragen zwischen den Check-ins? Kein Problem. Über WhatsApp bin ich täglich für dich da – mit ausführlichen Sprachnachrichten, Video-Erklärungen und annotiertem Formfeedback zu deinen Übungen.</p>
+    </div>
+  </div>
+
+  <!-- ─── Coaching-Ablauf ─── -->
+  <div class="section-label" style="margin-top:10px">
+    <span class="dot" style="background:var(--accent-teal)"></span>
+    <span style="color:var(--accent-teal)">So läuft dein Coaching ab</span>
+  </div>
+
+  <div class="chart-card">
+    <div class="chart-title">Von der Anfrage zum Ergebnis</div>
+    <div class="chart-subtitle">Jedes Coaching startet mit einem persönlichen Gespräch. Danach begleite ich dich Schritt für Schritt – so lange, wie du willst.</div>
+    <div class="process-grid">
+      <div class="process-item">
+        <span class="process-badge">01</span>
+        <div class="process-info">
+          <div class="process-label">Erstgespräch</div>
+          <div class="process-detail">Wir klären deine Ziele, deine Ausgangslage und deinen Alltag. Ich will verstehen, wo du stehst und wo du hinwillst.</div>
+        </div>
+      </div>
+      <div class="process-item">
+        <span class="process-badge">02</span>
+        <div class="process-info">
+          <div class="process-label">Individuelle Planerstellung</div>
+          <div class="process-detail">Du bekommst einen maßgeschneiderten Ernährungs- und Trainingsplan mit Video-Erklärung zu jedem Abschnitt.</div>
+        </div>
+      </div>
+      <div class="process-item">
+        <span class="process-badge">03</span>
+        <div class="process-info">
+          <div class="process-label">Wöchentliche Check-ins</div>
+          <div class="process-detail">Jeden Sonntag analysiere ich deine Fortschrittsfotos, Tracking-Daten und Trainingswerte. Du bekommst detailliertes Video-Feedback.</div>
+        </div>
+      </div>
+      <div class="process-item">
+        <span class="process-badge">04</span>
+        <div class="process-info">
+          <div class="process-label">Kontinuierliche Anpassung</div>
+          <div class="process-detail">Basierend auf deinem Feedback und deinen Daten optimiere ich den Plan laufend. Dein Coaching entwickelt sich mit dir weiter.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── Testimonials ─── -->
+  <div class="section-label" style="margin-top:10px">
+    <span class="dot" style="background:var(--accent-teal)"></span>
+    <span style="color:var(--accent-teal)">Was meine Clients sagen</span>
+  </div>
+
+  <div class="testimonials">
+    <div class="testimonial">
+      <p class="testimonial-quote">Bin so froh, dass wir damit angefangen haben. Danke für die Professionalität! Ich merke, wie sehr du in den Themen involviert und spezialisiert bist – finde ich richtig geil.</p>
+      <p class="testimonial-author">– Alex, Körperkomposition & Fettabbau</p>
+    </div>
+    <div class="testimonial">
+      <p class="testimonial-quote">Bin sehr happy mit dem Gewicht und fühle mich deutlich wohler. Meine Frau sagt: Sieht man sofort. Verdauung ist top, keine Probleme mehr. Ich bin richtig gut drauf.</p>
+      <p class="testimonial-author">– Daniel, Gewichtsmanagement</p>
+    </div>
+    <div class="testimonial">
+      <p class="testimonial-quote">Wirklich den goldenen Schnitt getroffen. Echt gut, günstig und alles essbar. Bester Trainer ever.</p>
+      <p class="testimonial-author">– Lukas, Bodybuilding & Ernährung</p>
+    </div>
+    <div class="testimonial">
+      <p class="testimonial-quote">Danke für deine Hilfe und den ganzen Input, den du mir immer gibst. Gott sei Dank bist du da und ich den Lifestyle eines Sportlers leben darf.</p>
+      <p class="testimonial-author">– Marc, Fitness-Transformation</p>
+    </div>
+  </div>
+
+  <!-- ─── CTA / Summary ─── -->
+  <div class="summary">
+    <p>Ich glaube daran, dass jeder Mensch das Potenzial hat, seine körperlichen Ziele zu erreichen – mit dem richtigen Plan, der richtigen Betreuung und der <span class="highlight">Bereitschaft, dem Prozess zu vertrauen</span>. Wenn du bereit bist, den nächsten Schritt zu gehen, freue ich mich auf deine Nachricht.</p>
+    <a href="mailto:mst.coaching.marvin@gmail.com" class="contact-link">Schreib mir eine E-Mail</a>
+  </div>
+
+  <div class="footer">
+    <a href="/">Startseite</a>
+    <a href="/impressum.html">Impressum</a>
+    <a href="/datenschutz.html">Datenschutz</a>
+  </div>
+</div>
+</body>
+</html>

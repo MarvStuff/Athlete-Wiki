@@ -11,7 +11,7 @@ Jede HTML-Datei beginnt mit diesem Kommentar-Block (vor dem <!DOCTYPE html>):
 title: [Titel des Artikels]
 date: [heutiges Datum, YYYY-MM-DD]
 tags: [relevante Tags, kommagetrennt, kleingeschrieben]
-category: [genau eine: ernährung | training | regeneration | mindset | gesundheit | wettkampf]
+category: [genau eine: ernaehrung | training | regeneration | gesundheit | wettkampf | allgemein]
 status: published
 slug: [YYYY-MM-DD-kurzname-des-artikels]
 summary: [1-2 Sätze, die den Inhalt zusammenfassen – wird in der Suche und WhatsApp-Vorschau angezeigt]

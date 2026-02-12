@@ -43,7 +43,6 @@
   --cat-ernaehrung:#51cf66;
   --cat-training:#ffa94d;
   --cat-regeneration:#74c0fc;
-  --cat-mindset:#cc5de8;
   --cat-gesundheit:#ff6b6b;
   --cat-wettkampf:#ffd43b;
   --cat-allgemein:#868e96;
@@ -66,7 +65,8 @@ body{background:var(--bg);color:var(--text);font-family:var(--font-body);font-we
 
 .hero{text-align:center;padding:80px 20px 40px}
 .hero h1{font-family:var(--font-heading);font-size:clamp(2.2rem,6vw,3.5rem);font-weight:400;line-height:1.1;background:linear-gradient(135deg,#fff 0%,#8899aa 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.hero-subtitle{font-size:clamp(1rem,2.5vw,1.15rem);color:var(--text-secondary);font-weight:300;margin-top:12px}
+.hero-subtitle{display:inline-block;margin-top:16px;padding:8px 20px;font-size:0.85rem;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;color:var(--accent);border:1px solid rgba(56,217,169,0.25);border-radius:100px;background:rgba(56,217,169,0.06);transition:background 0.2s,border-color 0.2s}
+.hero-subtitle:hover{background:rgba(56,217,169,0.12);border-color:rgba(56,217,169,0.4)}
 .hero-count{font-size:0.75rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--text-dim);margin-top:20px}
 
 .search-section{max-width:var(--max-width);margin:0 auto;padding:0 20px}
@@ -83,6 +83,7 @@ body{background:var(--bg);color:var(--text);font-family:var(--font-body);font-we
 .filter-chip{flex-shrink:0;padding:8px 16px;border:1px solid var(--border);border-radius:100px;background:transparent;color:var(--text-secondary);font-family:var(--font-body);font-size:0.82rem;font-weight:400;cursor:pointer;transition:border-color 0.2s,background 0.2s,color 0.2s;white-space:nowrap;min-height:44px;display:inline-flex;align-items:center;gap:6px}
 .filter-chip:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 .filter-chip[aria-checked="true"]{border-color:var(--chip-color,var(--accent));background:color-mix(in srgb,var(--chip-color,var(--accent)) 12%,transparent);color:var(--chip-color,var(--accent))}
+.filter-chip:disabled{opacity:0.35;cursor:default;pointer-events:none}
 .chip-count{font-size:0.72rem;opacity:0.7}
 
 .results-section{max-width:var(--max-width);margin:32px auto 0;padding:0 20px 80px}
@@ -146,7 +147,7 @@ body{background:var(--bg);color:var(--text);font-family:var(--font-body);font-we
 <main>
   <header class="hero" role="banner">
     <h1>Athlete Wiki</h1>
-    <p class="hero-subtitle">Coaching-Wissen durchsuchen</p>
+    <a href="/uebermich.html" class="hero-subtitle" style="text-decoration:none">MST-Coaching</a>
     <p class="hero-count">{{count}} Artikel</p>
   </header>
 
@@ -155,7 +156,7 @@ body{background:var(--bg);color:var(--text);font-family:var(--font-body);font-we
       <svg class="search-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
       <input id="search" type="search" placeholder="Suche nach Thema, Tag, Stichwort ..." autocomplete="off" aria-label="Artikel durchsuchen" aria-describedby="search-hint">
     </div>
-    <p id="search-hint" class="search-hint">Durchsucht Titel, Tags, Kategorien und Artikeltext</p>
+    <p id="search-hint" class="search-hint"> </br></p>
   </section>
 
   <nav class="filter-section" aria-label="Kategorie-Filter">
@@ -177,6 +178,7 @@ body{background:var(--bg);color:var(--text);font-family:var(--font-body);font-we
 <footer class="site-footer">
   <span>Athlete Wiki</span>
   <nav aria-label="Rechtliches">
+    <a href="/uebermich.html">Über mich</a>
     <a href="/impressum.html">Impressum</a>
     <a href="/datenschutz.html">Datenschutz</a>
   </nav>
@@ -201,7 +203,6 @@ body{background:var(--bg);color:var(--text);font-family:var(--font-body);font-we
     ernaehrung:{label:'Ernährung',color:'#51cf66'},
     training:{label:'Training',color:'#ffa94d'},
     regeneration:{label:'Regeneration',color:'#74c0fc'},
-    mindset:{label:'Mindset',color:'#cc5de8'},
     gesundheit:{label:'Gesundheit',color:'#ff6b6b'},
     wettkampf:{label:'Wettkampf',color:'#ffd43b'},
     allgemein:{label:'Allgemein',color:'#868e96'},
@@ -233,18 +234,18 @@ body{background:var(--bg);color:var(--text);font-family:var(--font-body);font-we
   if(typeof Fuse!=='undefined'){
     fuse=new Fuse(articles,{
       keys:[
-        {name:'title',weight:0.40},
+        {name:'title',weight:0.30},
+        {name:'slug',weight:0.25},
         {name:'tags',weight:0.20},
-        {name:'slug',weight:0.15},
         {name:'category',weight:0.10},
         {name:'keywords',weight:0.10},
         {name:'content',weight:0.05},
       ],
-      threshold:0.35,
+      threshold:0.25,
       ignoreLocation:true,
       minMatchCharLength:MIN_CHARS,
       includeScore:true,
-      findAllMatches:true,
+      findAllMatches:false,
     });
   }else{
     console.warn('Fuse.js nicht geladen, Suche deaktiviert');
@@ -352,9 +353,10 @@ body{background:var(--bg);color:var(--text);font-family:var(--font-body);font-we
 
     var html='<button class="filter-chip" role="radio" aria-checked="true" style="--chip-color:var(--accent)" data-cat="">Alle <span class="chip-count">('+articles.length+')</span></button>';
     Object.keys(CATEGORIES).forEach(function(cat){
-      if(!counts[cat]) return;
       var c=CATEGORIES[cat];
-      html+='<button class="filter-chip" role="radio" aria-checked="false" style="--chip-color:'+c.color+'" data-cat="'+cat+'">'+c.label+' <span class="chip-count">('+counts[cat]+')</span></button>';
+      var count=counts[cat]||0;
+      var disabled=count===0;
+      html+='<button class="filter-chip" role="radio" aria-checked="false" style="--chip-color:'+c.color+'"'+(disabled?' disabled aria-disabled="true"':'')+' data-cat="'+cat+'">'+c.label+' <span class="chip-count">('+count+')</span></button>';
     });
     filterContainer.innerHTML=html;
 
