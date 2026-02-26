@@ -2,10 +2,11 @@
 title: Mahlzeit-Alternativen – Deine Austausch-Optionen
 date: 2026-02-26
 tags: ernährung, mahlzeiten, protein, alternativen, meal-prep
-category: ernährung
+category: ernaehrung
 status: published
-slug: 2026-02-26-mahlzeit-alternativen
+slug: mahlzeitalternativen
 summary: Sechs Alternativen für deine Hauptmahlzeit – plus flexible Beilagen-Tauschoptionen für maximale Abwechslung.
+keywords: hähnchen, rinderfilet, fisch, quark, haferflocken, linsen
 -->
 
 <!DOCTYPE html>
@@ -14,866 +15,310 @@ summary: Sechs Alternativen für deine Hauptmahlzeit – plus flexible Beilagen-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mahlzeit-Alternativen – Deine Austausch-Optionen</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Outfit:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+<title>Mahlzeit-Alternativen – Athlete Wiki</title>
 <style>
-  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+@font-face{font-family:'DM Serif Display';font-style:normal;font-weight:400;font-display:swap;src:url('/fonts/dm-serif-display-regular.woff2') format('woff2')}
+@font-face{font-family:'Outfit';font-style:normal;font-weight:300;font-display:swap;src:url('/fonts/outfit-300.woff2') format('woff2')}
+@font-face{font-family:'Outfit';font-style:normal;font-weight:400;font-display:swap;src:url('/fonts/outfit-400.woff2') format('woff2')}
+@font-face{font-family:'Outfit';font-style:normal;font-weight:500;font-display:swap;src:url('/fonts/outfit-500.woff2') format('woff2')}
+@font-face{font-family:'Outfit';font-style:normal;font-weight:600;font-display:swap;src:url('/fonts/outfit-600.woff2') format('woff2')}
+@font-face{font-family:'Outfit';font-style:normal;font-weight:700;font-display:swap;src:url('/fonts/outfit-700.woff2') format('woff2')}
+:root{--bg:#0f1923;--card:#162231;--card-border:#1e3044;--accent-green:#51cf66;--accent-teal:#38d9a9;--accent-red:#ff6b6b;--accent-orange:#ffa94d;--accent-blue:#74c0fc;--accent-purple:#b197fc;--accent-yellow:#ffd43b;--text:#e8edf2;--text-muted:#8899aa;--text-dim:#556677}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--text);font-family:'Outfit',sans-serif;min-height:100vh;overflow-x:hidden}
+.container{max-width:1100px;margin:0 auto;padding:50px 30px 80px}
 
-:root {
-–bg: #0f1720;
-–bg-elevated: #162030;
-–bg-card: #1a2638;
-–bg-card-alt: #1e2d42;
-–border: #243448;
-–border-accent: #2e4460;
-–accent: #38d9a9;
-–accent-dim: rgba(56, 217, 169, 0.10);
-–accent-glow: rgba(56, 217, 169, 0.06);
-–green: #51cf66;
-–green-dim: rgba(81, 207, 102, 0.12);
-–orange: #ffa94d;
-–orange-dim: rgba(255, 169, 77, 0.12);
-–red: #ff6b6b;
-–red-dim: rgba(255, 107, 107, 0.10);
-–blue: #74c0fc;
-–blue-dim: rgba(116, 192, 252, 0.10);
-–yellow: #ffd43b;
-–yellow-dim: rgba(255, 212, 59, 0.10);
-–purple: #b197fc;
-–purple-dim: rgba(177, 151, 252, 0.10);
-–text: #e2e8f0;
-–text-secondary: #94a3b8;
-–text-dim: #5a7088;
-–text-bright: #f1f5f9;
-–protein: #38d9a9;
-–carbs: #ffa94d;
-–fat: #ff6b6b;
-–kcal: #74c0fc;
-}
+/* ── Header ── */
+.header{text-align:center;margin-bottom:60px;position:relative}
+.header::after{content:’’;position:absolute;bottom:-30px;left:50%;transform:translateX(-50%);width:80px;height:3px;background:linear-gradient(90deg,var(–accent-green),var(–accent-teal));border-radius:2px}
+h1{font-family:‘DM Serif Display’,serif;font-size:clamp(2rem,5vw,3.2rem);font-weight:400;line-height:1.2;background:linear-gradient(135deg,#fff 0%,#c8d6e5 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.header p{font-size:1.05rem;color:var(–text-muted);font-weight:300;max-width:600px;margin:16px auto 0;line-height:1.6}
 
-html {
-scroll-behavior: smooth;
--webkit-text-size-adjust: 100%;
-}
+/* ── Section Labels ── */
+.section-label{display:inline-flex;align-items:center;gap:8px;font-size:0.75rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;margin-bottom:14px}
+.section-label .dot{width:8px;height:8px;border-radius:50%}
 
-body {
-font-family: ‘Outfit’, sans-serif;
-background: var(–bg);
-color: var(–text);
-line-height: 1.7;
-font-weight: 300;
-min-height: 100vh;
-overflow-x: hidden;
-}
+/* ── Chart Card ── */
+.chart-card{background:var(–card);border:1px solid var(–card-border);border-radius:20px;padding:36px 32px 28px;position:relative;overflow:hidden;margin-bottom:40px}
+.chart-card::before{content:’’;position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.08),transparent)}
+.chart-title{font-family:‘DM Serif Display’,serif;font-size:1.5rem;margin-bottom:6px}
+.chart-subtitle{color:var(–text-muted);font-size:0.9rem;font-weight:300;margin-bottom:28px;line-height:1.5}
 
-/* ─── Background Atmosphere ─── */
-body::before {
-content: ‘’;
-position: fixed;
-top: -20%;
-left: 50%;
-transform: translateX(-50%);
-width: 800px;
-height: 600px;
-background: radial-gradient(ellipse, rgba(56, 217, 169, 0.04) 0%, transparent 70%);
-pointer-events: none;
-z-index: 0;
-}
+/* ── Ingredient Table ── */
+.ingredient-table{width:100%}
+.ingredient-row{display:grid;grid-template-columns:1.4fr repeat(4,1fr);gap:8px;padding:11px 0;border-bottom:1px solid rgba(30,48,68,0.6);align-items:center;font-size:0.9rem}
+.ingredient-row:last-child{border-bottom:none}
+.ingredient-row.header{font-size:0.72rem;font-weight:500;text-transform:uppercase;letter-spacing:1px;color:var(–text-dim);border-bottom:1px solid var(–card-border);padding-bottom:13px;margin-bottom:2px}
+.ingredient-row.total{border-top:2px solid rgba(30,48,68,0.8);border-bottom:none;padding-top:14px;margin-top:4px;font-weight:500}
+.ingredient-name{font-weight:400;color:var(–text)}
+.ingredient-name .amount{color:var(–text-dim);font-size:0.8rem;font-weight:300;margin-left:4px}
+.macro-val{text-align:right;font-variant-numeric:tabular-nums}
+.macro-val.kcal{color:var(–accent-blue)}
+.macro-val.protein{color:var(–accent-teal)}
+.macro-val.carbs{color:var(–accent-orange)}
+.macro-val.fat{color:var(–accent-red)}
 
-.page-wrapper {
-position: relative;
-z-index: 1;
-max-width: 780px;
-margin: 0 auto;
-padding: 0 24px;
-}
+/* ── Info Grid ── */
+.info-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:30px}
+@media(max-width:700px){.info-grid{grid-template-columns:1fr}}
+.info-card{background:rgba(255,255,255,0.02);border:1px solid var(–card-border);border-radius:14px;padding:24px;transition:border-color 0.3s}
+.info-card:hover{border-color:rgba(255,255,255,0.1)}
+.info-card h3{font-size:1rem;font-weight:600;margin-bottom:8px}
+.info-card p{font-size:0.88rem;color:var(–text-muted);line-height:1.6;font-weight:300}
 
-/* ─── Back Navigation ─── */
-.back-nav {
-padding: 20px 0 0;
-}
-.back-nav a {
-display: inline-flex;
-align-items: center;
-gap: 6px;
-color: var(–text-dim);
-text-decoration: none;
-font-size: 0.82rem;
-font-weight: 400;
-letter-spacing: 0.5px;
-transition: color 0.2s;
-}
-.back-nav a:hover { color: var(–accent); }
-.back-nav svg { width: 16px; height: 16px; }
+/* ── Alternative Cards ── */
+.alt-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+@media(max-width:760px){.alt-grid{grid-template-columns:1fr}}
 
-/* ─── Hero Section ─── */
-.hero {
-padding: 48px 0 40px;
-text-align: center;
-}
-.hero-category {
-display: inline-block;
-font-size: 0.72rem;
-font-weight: 600;
-text-transform: uppercase;
-letter-spacing: 2px;
-color: var(–green);
-background: var(–green-dim);
-padding: 5px 14px;
-border-radius: 20px;
-margin-bottom: 20px;
-}
-.hero h1 {
-font-family: ‘DM Serif Display’, serif;
-font-weight: 400;
-font-size: clamp(1.8rem, 5vw, 2.6rem);
-line-height: 1.2;
-color: var(–text-bright);
-margin-bottom: 16px;
-}
-.hero h1 span {
-background: linear-gradient(135deg, var(–accent), #74c0fc);
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
-background-clip: text;
-}
-.hero-meta {
-font-size: 0.85rem;
-color: var(–text-dim);
-font-weight: 400;
-}
-.hero-summary {
-max-width: 560px;
-margin: 20px auto 0;
-font-size: 1.02rem;
-color: var(–text-secondary);
-line-height: 1.7;
-}
+.alt-card{background:rgba(255,255,255,0.02);border:1px solid var(–card-border);border-radius:14px;padding:24px;transition:border-color 0.3s}
+.alt-card:hover{border-color:rgba(255,255,255,0.1)}
 
-/* ─── Divider ─── */
-.divider {
-height: 1px;
-background: linear-gradient(90deg, transparent, var(–border), transparent);
-margin: 8px 0 40px;
-}
+.alt-header{display:flex;align-items:center;gap:12px;margin-bottom:6px}
+.alt-number{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:9px;font-size:0.82rem;font-weight:600;flex-shrink:0}
+.alt-name{font-family:‘DM Serif Display’,serif;font-size:1.3rem}
+.alt-badge{font-size:0.68rem;font-weight:500;padding:3px 10px;border-radius:6px;margin-bottom:16px;display:inline-block}
 
-/* ─── Section Headings ─── */
-.section-label {
-font-size: 0.7rem;
-font-weight: 600;
-text-transform: uppercase;
-letter-spacing: 2.5px;
-color: var(–text-dim);
-margin-bottom: 10px;
-}
-.section-title {
-font-family: ‘DM Serif Display’, serif;
-font-weight: 400;
-font-size: 1.5rem;
-color: var(–text-bright);
-margin-bottom: 12px;
-}
-.section-desc {
-font-size: 0.92rem;
-color: var(–text-secondary);
-margin-bottom: 32px;
-max-width: 600px;
-line-height: 1.7;
-}
+.alt-ingredients{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:18px}
+.alt-chip{font-size:0.78rem;font-weight:400;color:var(–text-muted);background:rgba(255,255,255,0.03);border:1px solid var(–card-border);padding:4px 12px;border-radius:8px}
+.alt-chip.new{color:var(–accent-teal);border-color:rgba(56,217,169,0.2);background:rgba(56,217,169,0.08)}
 
-/* ─── Base Meal Card ─── */
-.base-meal {
-background: var(–bg-card);
-border: 1px solid var(–border);
-border-radius: 20px;
-padding: 32px;
-margin-bottom: 48px;
-position: relative;
-overflow: hidden;
-}
-.base-meal::before {
-content: ‘’;
-position: absolute;
-top: 0; left: 0; right: 0;
-height: 3px;
-background: linear-gradient(90deg, var(–accent), var(–blue));
-border-radius: 20px 20px 0 0;
-}
-.base-meal-header {
-display: flex;
-align-items: center;
-gap: 10px;
-margin-bottom: 24px;
-}
-.base-meal-badge {
-font-size: 0.7rem;
-font-weight: 600;
-text-transform: uppercase;
-letter-spacing: 1.5px;
-color: var(–accent);
-background: var(–accent-dim);
-padding: 4px 12px;
-border-radius: 8px;
-}
-.base-meal-label {
-font-size: 0.82rem;
-color: var(–text-dim);
-}
+.alt-macros{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}
+.alt-macro{background:rgba(15,25,35,0.5);border-radius:10px;padding:10px 8px;text-align:center}
+.alt-macro-val{font-size:1.05rem;font-weight:600;font-variant-numeric:tabular-nums;line-height:1.3}
+.alt-macro-label{font-size:0.62rem;font-weight:500;text-transform:uppercase;letter-spacing:1px;color:var(–text-dim);margin-top:2px}
 
-/* ─── Ingredient Rows ─── */
-.ingredient-table {
-width: 100%;
-margin-bottom: 20px;
-}
-.ingredient-row {
-display: grid;
-grid-template-columns: 1fr auto auto auto auto;
-gap: 8px;
-padding: 10px 0;
-border-bottom: 1px solid rgba(36, 52, 72, 0.6);
-align-items: center;
-font-size: 0.88rem;
-}
-.ingredient-row:last-child { border-bottom: none; }
-.ingredient-row.header {
-font-size: 0.72rem;
-font-weight: 500;
-text-transform: uppercase;
-letter-spacing: 1px;
-color: var(–text-dim);
-border-bottom: 1px solid var(–border);
-padding-bottom: 12px;
-margin-bottom: 4px;
-}
-.ingredient-row.total {
-border-top: 2px solid var(–border-accent);
-border-bottom: none;
-padding-top: 14px;
-margin-top: 4px;
-font-weight: 500;
-}
-.ingredient-name {
-font-weight: 400;
-color: var(–text);
-}
-.ingredient-name .amount {
-color: var(–text-dim);
-font-size: 0.8rem;
-font-weight: 300;
-margin-left: 4px;
-}
-.macro-val {
-text-align: right;
-min-width: 52px;
-font-variant-numeric: tabular-nums;
-}
-.macro-val.kcal { color: var(–kcal); }
-.macro-val.protein { color: var(–protein); }
-.macro-val.carbs { color: var(–carbs); }
-.macro-val.fat { color: var(–fat); }
+/* ── Warning / Info Boxes ── */
+.warning-box{background:linear-gradient(135deg,rgba(255,107,107,0.08),rgba(255,169,77,0.06));border:1px solid rgba(255,107,107,0.2);border-radius:16px;padding:28px 30px;display:flex;gap:18px;align-items:flex-start}
+.warning-box.warn-yellow{background:linear-gradient(135deg,rgba(255,212,59,0.08),rgba(255,169,77,0.06));border:1px solid rgba(255,212,59,0.2)}
+.warning-box.info-blue{background:linear-gradient(135deg,rgba(116,192,252,0.08),rgba(56,217,169,0.06));border:1px solid rgba(116,192,252,0.2)}
+.warning-icon{font-size:1.6rem;flex-shrink:0;margin-top:2px}
+.warning-box h3{font-size:1rem;font-weight:600;margin-bottom:6px}
+.warning-box p{font-size:0.88rem;color:var(–text-muted);line-height:1.6;font-weight:300}
 
-/* ─── Alternatives Grid ─── */
-.alternatives-section {
-margin-bottom: 48px;
-}
-.alt-grid {
-display: flex;
-flex-direction: column;
-gap: 16px;
-}
+/* ── Swap Cards ── */
+.swap-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+@media(max-width:700px){.swap-grid{grid-template-columns:1fr}}
+.swap-card{background:rgba(255,255,255,0.02);border:1px solid var(–card-border);border-radius:14px;padding:24px;transition:border-color 0.3s}
+.swap-card:hover{border-color:rgba(255,255,255,0.1)}
+.swap-icon{font-size:1.6rem;margin-bottom:14px}
+.swap-title{font-family:‘DM Serif Display’,serif;font-size:1.2rem;margin-bottom:4px}
+.swap-from{font-size:0.82rem;color:var(–text-dim);margin-bottom:16px}
+.swap-divider{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.swap-divider span{flex:1;height:1px;background:var(–card-border)}
+.swap-divider-icon{color:var(–accent-teal);font-size:0.85rem;font-weight:500}
+.swap-option{display:flex;align-items:center;gap:10px;font-size:0.88rem;color:var(–text-muted);padding:5px 0}
+.swap-option::before{content:’’;width:6px;height:6px;border-radius:50%;background:var(–accent-teal);opacity:0.5;flex-shrink:0}
 
-/* ─── Alternative Card ─── */
-.alt-card {
-background: var(–bg-card);
-border: 1px solid var(–border);
-border-radius: 16px;
-padding: 24px 28px;
-transition: border-color 0.3s, box-shadow 0.3s;
-position: relative;
-}
-.alt-card:hover {
-border-color: var(–border-accent);
-box-shadow: 0 4px 30px rgba(0,0,0,0.2);
-}
-.alt-card-header {
-display: flex;
-align-items: center;
-justify-content: space-between;
-margin-bottom: 16px;
-flex-wrap: wrap;
-gap: 8px;
-}
-.alt-number {
-display: inline-flex;
-align-items: center;
-justify-content: center;
-width: 32px;
-height: 32px;
-border-radius: 10px;
-font-size: 0.85rem;
-font-weight: 600;
-flex-shrink: 0;
-}
-.alt-card:nth-child(1) .alt-number { background: var(–accent-dim); color: var(–accent); }
-.alt-card:nth-child(2) .alt-number { background: var(–blue-dim); color: var(–blue); }
-.alt-card:nth-child(3) .alt-number { background: var(–orange-dim); color: var(–orange); }
-.alt-card:nth-child(4) .alt-number { background: var(–purple-dim); color: var(–purple); }
-.alt-card:nth-child(5) .alt-number { background: var(–yellow-dim); color: var(–yellow); }
-.alt-card:nth-child(6) .alt-number { background: var(–red-dim); color: var(–red); }
+/* ── Hinweise ── */
+.hinweis-item{display:flex;gap:16px;padding:16px 0;border-bottom:1px solid rgba(30,48,68,0.5)}
+.hinweis-item:last-child{border-bottom:none}
+.hinweis-icon{font-size:1.15rem;flex-shrink:0;margin-top:1px}
+.hinweis-text{font-size:0.88rem;color:var(–text-muted);line-height:1.6;font-weight:300}
+.hinweis-text strong{color:var(–text);font-weight:500}
 
-.alt-title-group {
-display: flex;
-align-items: center;
-gap: 12px;
-flex: 1;
-min-width: 0;
-}
-.alt-title {
-font-family: ‘DM Serif Display’, serif;
-font-size: 1.15rem;
-color: var(–text-bright);
-white-space: nowrap;
-overflow: hidden;
-text-overflow: ellipsis;
-}
-.alt-change-badge {
-font-size: 0.68rem;
-font-weight: 500;
-padding: 3px 10px;
-border-radius: 6px;
-white-space: nowrap;
-flex-shrink: 0;
-}
-.change-swap {
-color: var(–accent);
-background: var(–accent-dim);
-}
-.change-new {
-color: var(–orange);
-background: var(–orange-dim);
-}
-.change-combined {
-color: var(–yellow);
-background: var(–yellow-dim);
-}
-
-.alt-ingredients {
-display: flex;
-flex-wrap: wrap;
-gap: 6px;
-margin-bottom: 16px;
-}
-.alt-ingredient-chip {
-font-size: 0.78rem;
-font-weight: 400;
-color: var(–text-secondary);
-background: rgba(56, 217, 169, 0.06);
-border: 1px solid rgba(56, 217, 169, 0.08);
-padding: 4px 12px;
-border-radius: 8px;
-}
-.alt-ingredient-chip.highlight {
-color: var(–accent);
-border-color: rgba(56, 217, 169, 0.2);
-background: var(–accent-dim);
-}
-
-.alt-macros {
-display: grid;
-grid-template-columns: repeat(4, 1fr);
-gap: 8px;
-}
-.alt-macro-item {
-background: rgba(15, 23, 32, 0.5);
-border-radius: 10px;
-padding: 10px 12px;
-text-align: center;
-}
-.alt-macro-value {
-font-size: 1.1rem;
-font-weight: 600;
-font-variant-numeric: tabular-nums;
-line-height: 1.3;
-}
-.alt-macro-value.kcal { color: var(–kcal); }
-.alt-macro-value.protein { color: var(–protein); }
-.alt-macro-value.carbs { color: var(–carbs); }
-.alt-macro-value.fat { color: var(–fat); }
-.alt-macro-label {
-font-size: 0.65rem;
-font-weight: 500;
-text-transform: uppercase;
-letter-spacing: 1px;
-color: var(–text-dim);
-margin-top: 2px;
-}
-
-/* ─── Warning/Info Note ─── */
-.info-note {
-display: flex;
-gap: 14px;
-padding: 18px 20px;
-border-radius: 12px;
-margin-top: 12px;
-font-size: 0.85rem;
-line-height: 1.6;
-color: var(–text-secondary);
-}
-.info-note.warn {
-background: var(–yellow-dim);
-border: 1px solid rgba(255, 212, 59, 0.15);
-}
-.info-note.info {
-background: var(–blue-dim);
-border: 1px solid rgba(116, 192, 252, 0.15);
-}
-.info-note-icon {
-font-size: 1.1rem;
-flex-shrink: 0;
-line-height: 1.6;
-}
-.info-note strong {
-font-weight: 500;
-color: var(–text);
-}
-
-/* ─── Swap Section ─── */
-.swap-section {
-margin-bottom: 48px;
-}
-.swap-grid {
-display: grid;
-grid-template-columns: 1fr 1fr;
-gap: 16px;
-}
-@media (max-width: 560px) {
-.swap-grid { grid-template-columns: 1fr; }
-}
-.swap-card {
-background: var(–bg-card);
-border: 1px solid var(–border);
-border-radius: 16px;
-padding: 24px;
-}
-.swap-card-icon {
-font-size: 1.5rem;
-margin-bottom: 12px;
-}
-.swap-card-title {
-font-family: ‘DM Serif Display’, serif;
-font-size: 1.05rem;
-color: var(–text-bright);
-margin-bottom: 6px;
-}
-.swap-card-from {
-font-size: 0.82rem;
-color: var(–text-dim);
-margin-bottom: 14px;
-}
-.swap-arrow {
-display: flex;
-align-items: center;
-gap: 8px;
-margin-bottom: 10px;
-}
-.swap-arrow-line {
-flex: 1;
-height: 1px;
-background: var(–border);
-}
-.swap-arrow-icon {
-color: var(–accent);
-font-size: 0.8rem;
-font-weight: 500;
-}
-.swap-options {
-display: flex;
-flex-direction: column;
-gap: 6px;
-}
-.swap-option {
-display: flex;
-align-items: center;
-gap: 8px;
-font-size: 0.85rem;
-color: var(–text-secondary);
-}
-.swap-option::before {
-content: ‘’;
-width: 6px;
-height: 6px;
-border-radius: 50%;
-background: var(–accent);
-opacity: 0.5;
-flex-shrink: 0;
-}
-
-/* ─── Key Info / Hinweise ─── */
-.hinweise-section {
-margin-bottom: 48px;
-}
-.hinweise-card {
-background: var(–bg-card);
-border: 1px solid var(–border);
-border-radius: 16px;
-padding: 28px;
-}
-.hinweis-item {
-display: flex;
-gap: 14px;
-padding: 14px 0;
-border-bottom: 1px solid rgba(36, 52, 72, 0.5);
-}
-.hinweis-item:last-child { border-bottom: none; }
-.hinweis-icon {
-font-size: 1.1rem;
-flex-shrink: 0;
-margin-top: 2px;
-}
-.hinweis-text {
-font-size: 0.88rem;
-color: var(–text-secondary);
-line-height: 1.7;
-}
-.hinweis-text strong {
-color: var(–text);
-font-weight: 500;
-}
-
-/* ─── Footer ─── */
-.article-footer {
-padding: 32px 0;
-border-top: 1px solid var(–border);
-text-align: center;
-margin-top: 20px;
-}
-.article-footer p {
-font-size: 0.78rem;
-color: var(–text-dim);
-font-weight: 300;
-}
-
-/* ─── Animations ─── */
-@keyframes fadeUp {
-from { opacity: 0; transform: translateY(16px); }
-to { opacity: 1; transform: translateY(0); }
-}
-.hero { animation: fadeUp 0.6s ease both; }
-.base-meal { animation: fadeUp 0.6s ease 0.1s both; }
-.alt-card:nth-child(1) { animation: fadeUp 0.5s ease 0.15s both; }
-.alt-card:nth-child(2) { animation: fadeUp 0.5s ease 0.2s both; }
-.alt-card:nth-child(3) { animation: fadeUp 0.5s ease 0.25s both; }
-.alt-card:nth-child(4) { animation: fadeUp 0.5s ease 0.3s both; }
-.alt-card:nth-child(5) { animation: fadeUp 0.5s ease 0.35s both; }
-.alt-card:nth-child(6) { animation: fadeUp 0.5s ease 0.4s both; }
-.swap-card { animation: fadeUp 0.5s ease 0.45s both; }
-.hinweise-card { animation: fadeUp 0.5s ease 0.5s both; }
-
-/* ─── Responsive ─── */
-@media (max-width: 600px) {
-.page-wrapper { padding: 0 16px; }
-.base-meal { padding: 20px; }
-.alt-card { padding: 20px; }
-.alt-macros { grid-template-columns: repeat(2, 1fr); }
-.ingredient-row {
-grid-template-columns: 1fr auto auto auto auto;
-gap: 4px;
-font-size: 0.82rem;
-}
-.macro-val { min-width: 40px; }
-.hero h1 { font-size: 1.6rem; }
-}
+/* ── Summary ── */
+.summary{text-align:center;margin-top:50px;padding:30px}
+.summary p{color:var(–text-muted);font-size:0.95rem;line-height:1.7;max-width:650px;margin:0 auto;font-weight:300}
+.summary .highlight{color:var(–accent-teal);font-weight:500}
 </style>
 
 </head>
 <body>
+<div class="container">
 
-<div class="page-wrapper">
+  <!-- ════════ HEADER ════════ -->
 
-  <!-- Back Navigation -->
-
-  <nav class="back-nav">
-    <a href="/index.html">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
-      Zurück zur Übersicht
-    </a>
-  </nav>
-
-  <!-- Hero -->
-
-  <header class="hero">
-    <div class="hero-category">Ernährung</div>
-    <h1>Mahlzeit-Alternativen<br><span>Deine Austausch-Optionen</span></h1>
-    <div class="hero-meta">26. Februar 2026</div>
-    <p class="hero-summary">
-      Sechs Varianten für deine Hauptmahlzeit – plus flexible Beilagen-Tauschoptionen. So bekommst du Abwechslung, ohne deine Makros zu sprengen.
-    </p>
-  </header>
-
-  <div class="divider"></div>
-
-  <!-- ═══════ AKTUELLE MAHLZEIT ═══════ -->
-
-  <section>
-    <div class="section-label">Ausgangsbasis</div>
-    <div class="section-title">Deine aktuelle Mahlzeit</div>
-    <div class="section-desc">
-      Das ist dein Standard-Teller. Alle Alternativen orientieren sich an diesen Makros.
-    </div>
-
-```
-<div class="base-meal">
-  <div class="base-meal-header">
-    <span class="base-meal-badge">Referenz</span>
-    <span class="base-meal-label">Mahlzeit 1 – So wie bisher</span>
+  <div class="header">
+    <h1>Mahlzeit-Alternativen</h1>
+    <p>Sechs Varianten für deine Hauptmahlzeit – plus flexible Beilagen-Tauschoptionen. So bekommst du Abwechslung, ohne deine Makros zu sprengen.</p>
   </div>
 
-  <div class="ingredient-table">
-    <div class="ingredient-row header">
-      <span>Zutat</span>
-      <span class="macro-val">kcal</span>
-      <span class="macro-val">Protein</span>
-      <span class="macro-val">Carbs</span>
-      <span class="macro-val">Fett</span>
-    </div>
-    <div class="ingredient-row">
-      <span class="ingredient-name">Reis <span class="amount">62,5 g</span></span>
-      <span class="macro-val kcal">215</span>
-      <span class="macro-val protein">4 g</span>
-      <span class="macro-val carbs">48 g</span>
-      <span class="macro-val fat">3 g</span>
-    </div>
-    <div class="ingredient-row">
-      <span class="ingredient-name">Hähnchen <span class="amount">150 g</span></span>
-      <span class="macro-val kcal">171</span>
-      <span class="macro-val protein">36 g</span>
-      <span class="macro-val carbs">0 g</span>
-      <span class="macro-val fat">0 g</span>
-    </div>
-    <div class="ingredient-row">
-      <span class="ingredient-name">Spinat <span class="amount">100 g</span></span>
-      <span class="macro-val kcal">16</span>
-      <span class="macro-val protein">3 g</span>
-      <span class="macro-val carbs">1 g</span>
-      <span class="macro-val fat">0 g</span>
-    </div>
-    <div class="ingredient-row total">
-      <span class="ingredient-name" style="font-weight:500;">Gesamt</span>
-      <span class="macro-val kcal" style="font-weight:600;">402</span>
-      <span class="macro-val protein" style="font-weight:600;">43 g</span>
-      <span class="macro-val carbs" style="font-weight:600;">49 g</span>
-      <span class="macro-val fat" style="font-weight:600;">3 g</span>
-    </div>
+  <!-- ════════ REFERENZ-MAHLZEIT ════════ -->
+
+  <div class="section-label">
+    <span class="dot" style="background:var(--accent-teal)"></span>
+    <span style="color:var(--accent-teal)">Ausgangsbasis</span>
+  </div>
+
+  <div class="chart-card">
+    <div class="chart-title">Deine aktuelle Mahlzeit</div>
+    <div class="chart-subtitle">Das ist dein Standard-Teller. Alle Alternativen orientieren sich an diesen Makros.</div>
+
+```
+<div class="ingredient-table">
+  <div class="ingredient-row header">
+    <span>Zutat</span>
+    <span class="macro-val">kcal</span>
+    <span class="macro-val">Protein</span>
+    <span class="macro-val">Carbs</span>
+    <span class="macro-val">Fett</span>
+  </div>
+  <div class="ingredient-row">
+    <span class="ingredient-name">Reis <span class="amount">62,5 g</span></span>
+    <span class="macro-val kcal">215</span>
+    <span class="macro-val protein">4 g</span>
+    <span class="macro-val carbs">48 g</span>
+    <span class="macro-val fat">3 g</span>
+  </div>
+  <div class="ingredient-row">
+    <span class="ingredient-name">Hähnchen <span class="amount">150 g</span></span>
+    <span class="macro-val kcal">171</span>
+    <span class="macro-val protein">36 g</span>
+    <span class="macro-val carbs">0 g</span>
+    <span class="macro-val fat">0 g</span>
+  </div>
+  <div class="ingredient-row">
+    <span class="ingredient-name">Spinat <span class="amount">100 g</span></span>
+    <span class="macro-val kcal">16</span>
+    <span class="macro-val protein">3 g</span>
+    <span class="macro-val carbs">1 g</span>
+    <span class="macro-val fat">0 g</span>
+  </div>
+  <div class="ingredient-row total">
+    <span class="ingredient-name" style="font-weight:600">Gesamt</span>
+    <span class="macro-val kcal" style="font-weight:600">402</span>
+    <span class="macro-val protein" style="font-weight:600">43 g</span>
+    <span class="macro-val carbs" style="font-weight:600">49 g</span>
+    <span class="macro-val fat" style="font-weight:600">3 g</span>
   </div>
 </div>
 ```
 
-  </section>
+  </div>
 
-  <!-- ═══════ ALTERNATIVEN ═══════ -->
+  <!-- ════════ ALTERNATIVEN ════════ -->
 
-  <section class="alternatives-section">
-    <div class="section-label">Variationen</div>
-    <div class="section-title">Deine 6 Alternativen</div>
-    <div class="section-desc">
-      Du kannst die Mahlzeiten beliebig untereinander austauschen. Nur bei der pflanzlichen Variante (Nr. 6) maximal einmal pro Woche.
-    </div>
+  <div class="section-label" style="margin-top:50px">
+    <span class="dot" style="background:var(--accent-green)"></span>
+    <span style="color:var(--accent-green)">Variationen</span>
+  </div>
+
+  <div class="chart-card" style="padding-bottom:36px">
+    <div class="chart-title">Deine 6 Alternativen</div>
+    <div class="chart-subtitle">Du kannst die Mahlzeiten beliebig untereinander austauschen. Nur bei der pflanzlichen Variante (Nr. 6) maximal einmal pro Woche.</div>
 
 ```
 <div class="alt-grid">
 
-  <!-- ── Alternative 2: Rinderfilet ── -->
-  <div class="alt-card">
-    <div class="alt-card-header">
-      <div class="alt-title-group">
-        <span class="alt-number">2</span>
-        <span class="alt-title">Rinderfilet</span>
-      </div>
-      <span class="alt-change-badge change-swap">Hähnchen → Rind</span>
+  <!-- Alt 2: Rinderfilet -->
+  <div class="alt-card" style="border-left:3px solid var(--accent-teal)">
+    <div class="alt-header">
+      <span class="alt-number" style="background:rgba(56,217,169,0.12);color:var(--accent-teal)">2</span>
+      <span class="alt-name">Rinderfilet</span>
     </div>
+    <span class="alt-badge" style="background:rgba(56,217,169,0.12);color:var(--accent-teal)">Hähnchen → Rind</span>
     <div class="alt-ingredients">
-      <span class="alt-ingredient-chip">62,5 g Reis</span>
-      <span class="alt-ingredient-chip highlight">150 g Rinderfilet</span>
-      <span class="alt-ingredient-chip">100 g Spinat</span>
+      <span class="alt-chip">62,5 g Reis</span>
+      <span class="alt-chip new">150 g Rinderfilet</span>
+      <span class="alt-chip">100 g Spinat</span>
     </div>
     <div class="alt-macros">
-      <div class="alt-macro-item">
-        <div class="alt-macro-value kcal">~430</div>
-        <div class="alt-macro-label">kcal</div>
-      </div>
-      <div class="alt-macro-item">
-        <div class="alt-macro-value protein">~40 g</div>
-        <div class="alt-macro-label">Protein</div>
-      </div>
-      <div class="alt-macro-item">
-        <div class="alt-macro-value carbs">49 g</div>
-        <div class="alt-macro-label">Carbs</div>
-      </div>
-      <div class="alt-macro-item">
-        <div class="alt-macro-value fat">~8 g</div>
-        <div class="alt-macro-label">Fett</div>
-      </div>
+      <div class="alt-macro"><div class="alt-macro-val" style="color:var(--accent-blue)">~430</div><div class="alt-macro-label">kcal</div></div>
+      <div class="alt-macro"><div class="alt-macro-val" style="color:var(--accent-teal)">~40 g</div><div class="alt-macro-label">Protein</div></div>
+      <div class="alt-macro"><div class="alt-macro-val" style="color:var(--accent-orange)">49 g</div><div class="alt-macro-label">Carbs</div></div>
+      <div class="alt-macro"><div class="alt-macro-val" style="color:var(--accent-red)">~8 g</div><div class="alt-macro-label">Fett</div></div>
     </div>
   </div>
 
-  <!-- ── Alternative 3: Rindertatar ── -->
-  <div class="alt-card">
-    <div class="alt-card-header">
-      <div class="alt-title-group">
-        <span class="alt-number">3</span>
-        <span class="alt-title">Rindertatar</span>
-      </div>
-      <span class="alt-change-badge change-swap">Hähnchen → Tatar</span>
+  <!-- Alt 3: Rindertatar -->
+  <div class="alt-card" style="border-left:3px solid var(--accent-blue)">
+    <div class="alt-header">
+      <span class="alt-number" style="background:rgba(116,192,252,0.12);color:var(--accent-blue)">3</span>
+      <span class="alt-name">Rindertatar</span>
     </div>
+    <span class="alt-badge" style="background:rgba(116,192,252,0.12);color:var(--accent-blue)">Hähnchen → Tatar</span>
     <div class="alt-ingredients">
-      <span class="alt-ingredient-chip">62,5 g Reis</span>
-      <span class="alt-ingredient-chip highlight">150 g Rindertatar</span>
-      <span class="alt-ingredient-chip">100 g Spinat</span>
+      <span class="alt-chip">62,5 g Reis</span>
+      <span class="alt-chip new">150 g Rindertatar</span>
+      <span class="alt-chip">100 g Spinat</span>
     </div>
     <div class="alt-macros">
-      <div class="alt-macro-item">
-        <div class="alt-macro-value kcal">~425</div>
-        <div class="alt-macro-label">kcal</div>
-      </div>
-      <div class="alt-macro-item">
-        <div class="alt-macro-value protein">~39 g</div>
-        <div class="alt-macro-label">Protein</div>
-      </div>
-      <div class="alt-macro-item">
-        <div class="alt-macro-value carbs">49 g</div>
-        <div class="alt-macro-label">Carbs</div>
-      </div>
-      <div class="alt-macro-item">
-        <div class="alt-macro-value fat">~8 g</div>
-        <div class="alt-macro-label">Fett</div>
-      </div>
+      <div class="alt-macro"><div class="alt-macro-val" style="color:var(--accent-blue)">~425</div><div class="alt-macro-label">kcal</div></div>
+      <div class="alt-macro"><div class="alt-macro-val" style="color:var(--accent-teal)">~39 g</div><div class="alt-macro-label">Protein</div></div>
+      <div class="alt-macro"><div class="alt-macro-val" style="color:var(--accent-orange)">49 g</div><div class="alt-macro-label">Carbs</div></div>
+      <div class="alt-macro"><div class="alt-macro-val" style="color:var(--accent-red)">~8 g</div><div class="alt-macro-label">Fett</div></div>
     </div>
   </div>
 
-  <!-- ── Alternative 4: Weißer Fisch ── -->
-  <div class="alt-card">
-    <div class="alt-card-header">
-      <div class="alt-title-group">
-        <span class="alt-number">4</span>
-        <span class="alt-title">Weißer Fisch</span>
-      </div>
-      <span class="alt-change-badge change-swap">Hähnchen → Fisch</span>
+  <!-- Alt 4: Weißer Fisch -->
+  <div class="alt-card" style="border-left:3px solid var(--accent-green)">
+    <div class="alt-header">
+      <span class="alt-number" style="background:rgba(81,207,102,0.12);color:var(--accent-green)">4</span>
+      <span class="alt-name">Weißer Fisch</span>
     </div>
+    <span class="alt-badge" style="background:rgba(81,207,102,0.12);color:var(--accent-green)">Hähnchen → Fisch</span>
     <div class="alt-ingredients">
-      <span class="alt-ingredient-chip">62,5 g Reis</span>
-      <span class="alt-ingredient-chip highlight">150 g weißer Fisch</span>
-      <span class="alt-ingredient-chip">100 g Spinat</span>
+      <span class="alt-chip">62,5 g Reis</span>
+      <span class="alt-chip new">150 g weißer Fisch</span>
+      <span class="alt-chip">100 g Spinat</span>
     </div>
     <div class="alt-macros">
-      <div class="alt-macro-item">
-        <div class="alt-macro-value kcal">~355</div>
-        <div class="alt-macro-label">kcal</div>
-      </div>
-      <div class="alt-macro-item">
-        <div class="alt-macro-value protein">~35 g</div>
-        <div class="alt-macro-label">Protein</div>
-      </div>
-      <div class="alt-macro-item">
-        <div class="alt-macro-value carbs">49 g</div>
-        <div class="alt-macro-label">Carbs</div>
-      </div>
-      <div class="alt-macro-item">
-        <div class="alt-macro-value fat">~4 g</div>
-        <div class="alt-macro-label">Fett</div>
-      </div>
+      <div class="alt-macro"><div class="alt-macro-val" style="color:var(--accent-blue)">~355</div><div class="alt-macro-label">kcal</div></div>
+      <div class="alt-macro"><div class="alt-macro-val" style="color:var(--accent-teal)">~35 g</div><div class="alt-macro-label">Protein</div></div>
+      <div class="alt-macro"><div class="alt-macro-val" style="color:var(--accent-orange)">49 g</div><div class="alt-macro-label">Carbs</div></div>
+      <div class="alt-macro"><div class="alt-macro-val" style="color:var(--accent-red)">~4 g</div><div class="alt-macro-label">Fett</div></div>
     </div>
   </div>
 
-  <!-- ── Alternative 5: Haferflocken + Quark ── -->
-  <div class="alt-card">
-    <div class="alt-card-header">
-      <div class="alt-title-group">
-        <span class="alt-number">5</span>
-        <span class="alt-title">Quark-Bowl</span>
-      </div>
-      <span class="alt-change-badge change-new">Komplett neue Mahlzeit</span>
+  <!-- Alt 5: Quark-Bowl -->
+  <div class="alt-card" style="border-left:3px solid var(--accent-orange)">
+    <div class="alt-header">
+      <span class="alt-number" style="background:rgba(255,169,77,0.12);color:var(--accent-orange)">5</span>
+      <span class="alt-name">Quark-Bowl</span>
     </div>
+    <span class="alt-badge" style="background:rgba(255,169,77,0.12);color:var(--accent-orange)">Komplett neue Mahlzeit</span>
     <div class="alt-ingredients">
-      <span class="alt-ingredient-chip highlight">60 g Haferflocken</span>
-      <span class="alt-ingredient-chip highlight">250 g Magerquark</span>
-      <span class="alt-ingredient-chip highlight">100 g Beeren</span>
+      <span class="alt-chip new">60 g Haferflocken</span>
+      <span class="alt-chip new">250 g Magerquark</span>
+      <span class="alt-chip new">100 g Beeren</span>
     </div>
     <div class="alt-macros">
-      <div class="alt-macro-item">
-        <div class="alt-macro-value kcal">~430</div>
-        <div class="alt-macro-label">kcal</div>
-      </div>
-      <div class="alt-macro-item">
-        <div class="alt-macro-value protein">~39 g</div>
-        <div class="alt-macro-label">Protein</div>
-      </div>
-      <div class="alt-macro-item">
-        <div class="alt-macro-value carbs">~56 g</div>
-        <div class="alt-macro-label">Carbs</div>
-      </div>
-      <div class="alt-macro-item">
-        <div class="alt-macro-value fat">~5 g</div>
-        <div class="alt-macro-label">Fett</div>
-      </div>
+      <div class="alt-macro"><div class="alt-macro-val" style="color:var(--accent-blue)">~430</div><div class="alt-macro-label">kcal</div></div>
+      <div class="alt-macro"><div class="alt-macro-val" style="color:var(--accent-teal)">~39 g</div><div class="alt-macro-label">Protein</div></div>
+      <div class="alt-macro"><div class="alt-macro-val" style="color:var(--accent-orange)">~56 g</div><div class="alt-macro-label">Carbs</div></div>
+      <div class="alt-macro"><div class="alt-macro-val" style="color:var(--accent-red)">~5 g</div><div class="alt-macro-label">Fett</div></div>
     </div>
   </div>
 
-  <!-- ── Alternative 6: Pflanzlich ── -->
-  <div class="alt-card">
-    <div class="alt-card-header">
-      <div class="alt-title-group">
-        <span class="alt-number">6</span>
-        <span class="alt-title">Pflanzliche Variante</span>
-      </div>
-      <span class="alt-change-badge change-combined">Mittag + Pre-Workout</span>
+  <!-- Alt 6: Pflanzlich -->
+  <div class="alt-card" style="border-left:3px solid var(--accent-yellow)">
+    <div class="alt-header">
+      <span class="alt-number" style="background:rgba(255,212,59,0.12);color:var(--accent-yellow)">6</span>
+      <span class="alt-name">Pflanzliche Variante</span>
     </div>
+    <span class="alt-badge" style="background:rgba(255,212,59,0.12);color:var(--accent-yellow)">Mittag + Pre-Workout</span>
     <div class="alt-ingredients">
-      <span class="alt-ingredient-chip highlight">100 g rote Linsen</span>
-      <span class="alt-ingredient-chip highlight">200 g Kidneybohnen</span>
-      <span class="alt-ingredient-chip highlight">30 g Whey-Shake</span>
+      <span class="alt-chip new">100 g rote Linsen</span>
+      <span class="alt-chip new">200 g Kidneybohnen</span>
+      <span class="alt-chip new">30 g Whey-Shake</span>
     </div>
     <div class="alt-macros">
-      <div class="alt-macro-item">
-        <div class="alt-macro-value kcal">~710</div>
-        <div class="alt-macro-label">kcal</div>
-      </div>
-      <div class="alt-macro-item">
-        <div class="alt-macro-value protein">~65 g</div>
-        <div class="alt-macro-label">Protein</div>
-      </div>
-      <div class="alt-macro-item">
-        <div class="alt-macro-value carbs">~91 g</div>
-        <div class="alt-macro-label">Carbs</div>
-      </div>
-      <div class="alt-macro-item">
-        <div class="alt-macro-value fat">~5 g</div>
-        <div class="alt-macro-label">Fett</div>
-      </div>
+      <div class="alt-macro"><div class="alt-macro-val" style="color:var(--accent-blue)">~710</div><div class="alt-macro-label">kcal</div></div>
+      <div class="alt-macro"><div class="alt-macro-val" style="color:var(--accent-teal)">~65 g</div><div class="alt-macro-label">Protein</div></div>
+      <div class="alt-macro"><div class="alt-macro-val" style="color:var(--accent-orange)">~91 g</div><div class="alt-macro-label">Carbs</div></div>
+      <div class="alt-macro"><div class="alt-macro-val" style="color:var(--accent-red)">~5 g</div><div class="alt-macro-label">Fett</div></div>
     </div>
-
-    <div class="info-note warn">
-      <span class="info-note-icon">⚠</span>
+    <div class="warning-box warn-yellow" style="margin-top:16px;padding:20px 22px">
+      <div class="warning-icon">&#9888;&#65039;</div>
       <div>
-        <strong>Max. 1× pro Woche.</strong> Pflanzliche Eiweißquellen haben limitierende Aminosäuren – die Proteinqualität ist deutlich geringer als bei tierischen Quellen. Zusätzlich bringen die Hülsenfrüchte mehr Kohlenhydrate mit, was die Mahlzeit kalorienreicher und weniger nährstoffdicht macht. Deshalb werden hier Mittag und Pre-Workout zusammengelegt.
+        <h3 style="color:var(--accent-yellow)">Max. 1× pro Woche</h3>
+        <p>Pflanzliche Eiweißquellen haben limitierende Aminosäuren – die Proteinqualität ist deutlich geringer. Zusätzlich bringen Hülsenfrüchte mehr Kohlenhydrate mit, was die Mahlzeit kalorienreicher und weniger nährstoffdicht macht. Deshalb werden hier Mittag und Pre-Workout zusammengelegt.</p>
       </div>
     </div>
   </div>
 
-  <!-- ── Bonus-Hinweis: Harzer Käse ── -->
-  <div class="alt-card" style="border-style: dashed;">
-    <div class="alt-card-header">
-      <div class="alt-title-group">
-        <span class="alt-number" style="background: rgba(134, 142, 150, 0.15); color: #868e96;">7</span>
-        <span class="alt-title" style="opacity: 0.7;">Harzer Käse</span>
-      </div>
-      <span class="alt-change-badge" style="background: rgba(134, 142, 150, 0.12); color: #868e96;">Optional</span>
+  <!-- Alt 7: Harzer Käse (optional) -->
+  <div class="alt-card" style="border-left:3px solid var(--text-dim);border-style:dashed;border-left-style:solid">
+    <div class="alt-header">
+      <span class="alt-number" style="background:rgba(85,102,119,0.15);color:var(--text-dim)">7</span>
+      <span class="alt-name" style="color:var(--text-muted)">Harzer Käse</span>
     </div>
-    <div class="info-note info" style="margin-top: 0;">
-      <span class="info-note-icon">💡</span>
+    <span class="alt-badge" style="background:rgba(85,102,119,0.12);color:var(--text-dim)">Optional</span>
+    <div class="warning-box info-blue" style="padding:20px 22px">
+      <div class="warning-icon">&#128161;</div>
       <div>
-        <strong>Probier ihn erst mal!</strong> Harzer Käse wäre eine weitere Option mit extrem guten Makros – aber er hat einen sehr intensiven Geschmack. Teste ihn zuerst, bevor wir ihn als feste Alternative einplanen.
+        <h3 style="color:var(--accent-blue)">Probier ihn erst mal!</h3>
+        <p>Harzer Käse wäre eine weitere Option mit extrem guten Makros – aber er hat einen sehr intensiven Geschmack. Teste ihn zuerst, bevor wir ihn als feste Alternative einplanen.</p>
       </div>
     </div>
   </div>
@@ -881,97 +326,89 @@ font-size: 0.82rem;
 </div>
 ```
 
-  </section>
+  </div>
 
-  <!-- ═══════ BEILAGEN-TAUSCH ═══════ -->
+  <!-- ════════ BEILAGEN-TAUSCH ════════ -->
 
-  <section class="swap-section">
-    <div class="section-label">Flexibel</div>
-    <div class="section-title">Beilagen-Tausch</div>
-    <div class="section-desc">
-      Diese Beilagen kannst du bei jeder Mahlzeit frei austauschen – die Nährstoffe und Kalorien sind vergleichbar.
-    </div>
+  <div class="section-label" style="margin-top:50px">
+    <span class="dot" style="background:var(--accent-orange)"></span>
+    <span style="color:var(--accent-orange)">Flexibel</span>
+  </div>
+
+  <div class="chart-card" style="padding-bottom:36px">
+    <div class="chart-title">Beilagen-Tausch</div>
+    <div class="chart-subtitle">Diese Beilagen kannst du bei jeder Mahlzeit frei austauschen – die Nährstoffe und Kalorien sind vergleichbar.</div>
 
 ```
 <div class="swap-grid">
   <div class="swap-card">
-    <div class="swap-card-icon">🥬</div>
-    <div class="swap-card-title">Gemüse-Tausch</div>
-    <div class="swap-card-from">Statt 100 g Spinat:</div>
-    <div class="swap-arrow">
-      <span class="swap-arrow-line"></span>
-      <span class="swap-arrow-icon">↓</span>
-      <span class="swap-arrow-line"></span>
+    <div class="swap-icon">&#129388;</div>
+    <div class="swap-title">Gemüse-Tausch</div>
+    <div class="swap-from">Statt 100 g Spinat:</div>
+    <div class="swap-divider">
+      <span></span>
+      <span class="swap-divider-icon">↓</span>
+      <span></span>
     </div>
-    <div class="swap-options">
-      <div class="swap-option">Blumenkohl</div>
-      <div class="swap-option">Rosenkohl</div>
-      <div class="swap-option">Brokkoli</div>
-    </div>
+    <div class="swap-option">Blumenkohl</div>
+    <div class="swap-option">Rosenkohl</div>
+    <div class="swap-option">Brokkoli</div>
   </div>
 
   <div class="swap-card">
-    <div class="swap-card-icon">🍚</div>
-    <div class="swap-card-title">Kohlenhydrat-Tausch</div>
-    <div class="swap-card-from">Statt 62,5 g Reis:</div>
-    <div class="swap-arrow">
-      <span class="swap-arrow-line"></span>
-      <span class="swap-arrow-icon">↓</span>
-      <span class="swap-arrow-line"></span>
+    <div class="swap-icon">&#127834;</div>
+    <div class="swap-title">Kohlenhydrat-Tausch</div>
+    <div class="swap-from">Statt 62,5 g Reis:</div>
+    <div class="swap-divider">
+      <span></span>
+      <span class="swap-divider-icon">↓</span>
+      <span></span>
     </div>
-    <div class="swap-options">
-      <div class="swap-option">250 g Kartoffeln</div>
-    </div>
+    <div class="swap-option">250 g Kartoffeln</div>
   </div>
 </div>
 ```
 
-  </section>
+  </div>
 
-  <!-- ═══════ HINWEISE ═══════ -->
+  <!-- ════════ HINWEISE ════════ -->
 
-  <section class="hinweise-section">
-    <div class="section-label">Gut zu wissen</div>
-    <div class="section-title">Wichtige Hinweise</div>
+  <div class="section-label" style="margin-top:50px">
+    <span class="dot" style="background:var(--accent-red)"></span>
+    <span style="color:var(--accent-red)">Gut zu wissen</span>
+  </div>
+
+  <div class="chart-card">
+    <div class="chart-title">Wichtige Hinweise</div>
+    <div class="chart-subtitle" style="margin-bottom:8px"></div>
 
 ```
-<div class="hinweise-card">
-  <div class="hinweis-item">
-    <span class="hinweis-icon">🔄</span>
-    <div class="hinweis-text">
-      <strong>Frei kombinierbar:</strong> Du kannst die Mahlzeiten 1–5 beliebig untereinander austauschen. Das hat langfristig keinen Nachteil.
-    </div>
-  </div>
-  <div class="hinweis-item">
-    <span class="hinweis-icon">🌱</span>
-    <div class="hinweis-text">
-      <strong>Pflanzliche Variante (Nr. 6) max. 1× pro Woche:</strong> Pflanzliche Eiweißquellen haben limitierende Aminosäuren – die Qualität des Proteins ist deutlich schlechter als bei tierischen Quellen. Dazu kommen mehr Kohlenhydrate durch die Hülsenfrüchte.
-    </div>
-  </div>
-  <div class="hinweis-item">
-    <span class="hinweis-icon">🚫</span>
-    <div class="hinweis-text">
-      <strong>Kein Tofu:</strong> Bewusst nicht als Alternative aufgenommen – aufgrund des Soja-Anteils.
-    </div>
-  </div>
-  <div class="hinweis-item">
-    <span class="hinweis-icon">🥦</span>
-    <div class="hinweis-text">
-      <strong>Beilagen-Tausch immer möglich:</strong> Spinat ↔ Blumenkohl, Rosenkohl oder Brokkoli. Reis ↔ 250 g Kartoffeln. Die Nährstoffe sind hier vergleichbar.
-    </div>
-  </div>
+<div class="hinweis-item">
+  <span class="hinweis-icon">&#128260;</span>
+  <div class="hinweis-text"><strong>Frei kombinierbar:</strong> Du kannst die Mahlzeiten 1–5 beliebig untereinander austauschen. Das hat langfristig keinen Nachteil.</div>
+</div>
+<div class="hinweis-item">
+  <span class="hinweis-icon">&#127793;</span>
+  <div class="hinweis-text"><strong>Pflanzliche Variante (Nr. 6) max. 1× pro Woche:</strong> Pflanzliche Eiweißquellen haben limitierende Aminosäuren – die Qualität des Proteins ist deutlich schlechter als bei tierischen Quellen. Dazu kommen mehr Kohlenhydrate durch die Hülsenfrüchte.</div>
+</div>
+<div class="hinweis-item">
+  <span class="hinweis-icon">&#128683;</span>
+  <div class="hinweis-text"><strong>Kein Tofu:</strong> Bewusst nicht als Alternative aufgenommen – aufgrund des Soja-Anteils.</div>
+</div>
+<div class="hinweis-item">
+  <span class="hinweis-icon">&#129382;</span>
+  <div class="hinweis-text"><strong>Beilagen-Tausch immer möglich:</strong> Spinat ↔ Blumenkohl, Rosenkohl oder Brokkoli. Reis ↔ 250 g Kartoffeln. Die Nährstoffe sind hier vergleichbar.</div>
 </div>
 ```
 
-  </section>
+  </div>
 
-  <!-- Footer -->
+  <!-- ════════ SUMMARY ════════ -->
 
-  <footer class="article-footer">
-    <p>Athlete Wiki · Coaching-Wissen</p>
-  </footer>
+  <div class="summary">
+    <p>Du hast <span class="highlight">6 Varianten für deine Proteinquelle</span> plus flexible Beilagen-Tauschoptionen. Kombiniere frei – nur bei der pflanzlichen Variante maximal einmal pro Woche.</p>
+  </div>
 
 </div>
-
 </body>
 </html>
